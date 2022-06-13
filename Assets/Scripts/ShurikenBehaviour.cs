@@ -36,5 +36,9 @@ public class ShurikenBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Creep"))
+        {
+            collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(20, isCrit);
+        }
     }
 }
