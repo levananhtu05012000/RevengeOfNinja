@@ -172,3 +172,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectDistance: 2
+  prefabExplosion: {fileID: 1035934715385707921, guid: 05376fdaac4b8c14c8733d18d2e5e05d, type: 3}
