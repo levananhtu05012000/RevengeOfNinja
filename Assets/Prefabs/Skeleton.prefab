@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3631018829485774099}
   m_Layer: 8
   m_Name: Skeleton
-  m_TagString: CreepSkeleton
+  m_TagString: Creep
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
