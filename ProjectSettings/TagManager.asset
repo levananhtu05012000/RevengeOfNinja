@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Creep
+  - CreepFlyingEye
+  - CreepSkeleton
+  - CreepGoblin
+  - CreepMushroom
   layers:
   - Default
   - TransparentFX
