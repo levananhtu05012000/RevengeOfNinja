@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 534341570697209805}
   m_Layer: 8
   m_Name: Mushroom
-  m_TagString: CreepMushroom
+  m_TagString: Creep
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
