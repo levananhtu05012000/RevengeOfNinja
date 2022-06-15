@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GoblinAttack : MonoBehaviour
 {
-    private void OnColliderEnter(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.tag);
     }
 }
