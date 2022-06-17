@@ -6,10 +6,12 @@ public class ShurikenBehaviour : MonoBehaviour
 {
     private bool isCrit = false;
     private SpriteRenderer sr;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Awake()
     {
+        anim = GameObject.FindGameObjectWithTag("Boss").GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
     }
 
@@ -39,6 +41,11 @@ public class ShurikenBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("Creep"))
         {
             collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(20, isCrit);
+        }
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            collision.gameObject.GetComponent<Boss_HealthBar>().TakeDamage(20, isCrit);
+            anim.SetTrigger("Takehit");
         }
     }
 }
