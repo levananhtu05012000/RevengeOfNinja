@@ -561,11 +561,12 @@ GameObject:
   - component: {fileID: 199912188}
   - component: {fileID: 199912192}
   - component: {fileID: 199912193}
-  - component: {fileID: 199912195}
   - component: {fileID: 199912191}
+  - component: {fileID: 199912197}
+  - component: {fileID: 199912196}
   m_Layer: 8
   m_Name: Boss
-  m_TagString: Creep
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -708,7 +709,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.004352002, y: 0.4320983}
   m_Size: {x: 0.45342457, y: 0.8483191}
   m_Direction: 0
---- !u!114 &199912195
+--- !u!114 &199912196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -717,10 +718,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 199912187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bd02a6845b27c444aa0d721e8ce0b2f, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  health: 500
+  deathEffect: {fileID: 0}
+  isInvulnerable: 0
+--- !u!114 &199912197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199912187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2097a72e6809da3479b63e5241f15460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 40
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3042194518639860665, guid: cbad174ddb8593346b151187779f0afc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3781894532782323378, guid: cbad174ddb8593346b151187779f0afc, type: 3}
       propertyPath: m_RootOrder
@@ -1070,7 +1086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 534341570697209804, guid: e7a6821d88e1cde4b9318ca602d95a7d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a6821d88e1cde4b9318ca602d95a7d, type: 3}
@@ -1091,7 +1107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8923077079453641771, guid: 534ee236842a7904c9c23d0f671cb49c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8923077079453641772, guid: 534ee236842a7904c9c23d0f671cb49c, type: 3}
       propertyPath: m_RootOrder
@@ -1391,7 +1407,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.4216216, y: 1}
+    m_SensorSize: {x: 2.4558523, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1569,7 +1585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3631018829485774103, guid: bd3a36ae8aaa18b4996b3d79459b4a87, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd3a36ae8aaa18b4996b3d79459b4a87, type: 3}

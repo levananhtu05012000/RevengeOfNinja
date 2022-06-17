@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBarBehaviour : MonoBehaviour
+public class Boss_HealthBar : MonoBehaviour
 {
     public float maxHealth = 50;
     private Slider slider;
     private float currHealth;
     private GameObject floatingTextPrefab;
+    private Animator anim;
     private string healbarPrefabLocation = "Prefabs/Healthbar";
     private string floatingTextPrefabLocation = "Prefabs/FloatingText";
 
     void Awake()
     {
+        anim = GameObject.FindGameObjectWithTag("Boss").GetComponent<Animator>();
         GameObject healthBarCanvas = Instantiate((GameObject)Resources.Load(healbarPrefabLocation, typeof(GameObject)));
         floatingTextPrefab = (GameObject)Resources.Load(floatingTextPrefabLocation, typeof(GameObject));
         healthBarCanvas.transform.parent = transform;
@@ -31,7 +33,8 @@ public class HealthBarBehaviour : MonoBehaviour
         if (currHealth <= 0)
         {
             // dead
-            Destroy(gameObject);
+            anim.SetTrigger("Death");
+            //Destroy(gameObject);
 
         }
     }
