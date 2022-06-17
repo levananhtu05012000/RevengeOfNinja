@@ -27,4 +27,8 @@ public class Boss : MonoBehaviour
 		}
 	}
 
+	public void OnDeathAnimationFinished() 
+	{
+		Destroy(gameObject);
+	}
 }

@@ -8,12 +8,16 @@ public class HealthBarBehaviour : MonoBehaviour
     public float maxHealth = 50;
     private Slider slider;
     private float currHealth;
+    private Animator anim;
     private GameObject floatingTextPrefab;
     private string healbarPrefabLocation = "Prefabs/Healthbar";
     private string floatingTextPrefabLocation = "Prefabs/FloatingText";
 
+
+
     void Awake()
     {
+        anim = GameObject.FindGameObjectWithTag("Creep").GetComponent<Animator>();
         GameObject healthBarCanvas = Instantiate((GameObject)Resources.Load(healbarPrefabLocation, typeof(GameObject)));
         floatingTextPrefab = (GameObject)Resources.Load(floatingTextPrefabLocation, typeof(GameObject));
         healthBarCanvas.transform.parent = transform;
@@ -31,8 +35,7 @@ public class HealthBarBehaviour : MonoBehaviour
         if (currHealth <= 0)
         {
             // deadth
-            Destroy(gameObject);
-
+            anim.SetTrigger("Death");
         }
     }
 
