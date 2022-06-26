@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cad32643d72c6fb4b8eaddfb1566cd92
+guid: 70efa3c9775556f469883be8813cd59a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,85 +116,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dead_44_0
+      name: jump_boss_36_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 1
-        width: 114
-        height: 121
+        x: 40
+        y: 7
+        width: 189
+        height: 92
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 121}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd21e478f8081424b983dc8a7183680c
-      internalID: -953265832
+      spriteID: ef2e67f95d497d44eb7858ee8b78e14f
+      internalID: 629528749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_1
+      name: jump_boss_36_1
       rect:
         serializedVersion: 2
         x: 323
-        y: 1
-        width: 114
-        height: 85
+        y: 7
+        width: 197
+        height: 91
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 85}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 940d112f296386e469e25af90fbe5b46
-      internalID: -494085127
+      spriteID: 4278a19d2bed45f42ad844b5770a1e6d
+      internalID: 325141611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_2
+      name: jump_boss_36_2
       rect:
         serializedVersion: 2
-        x: 611
-        y: 1
-        width: 114
-        height: 2
+        x: 609
+        y: 7
+        width: 202
+        height: 93
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 2}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb22a4a02b48c684d9bedc2ee43a69e5
-      internalID: 963707946
+      spriteID: 2c48d9f5d2c488142beeea23a2c98703
+      internalID: -503319601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_3
+      name: jump_boss_36_3
       rect:
         serializedVersion: 2
-        x: 899
-        y: 1
-        width: 114
-        height: 2
+        x: 895
+        y: 7
+        width: 205
+        height: 91
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 2}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00fcc46b8390e774e9cb815e71ca6526
-      internalID: 1216818329
+      spriteID: 2076f143b3dfde54eb56a0e0ed583f61
+      internalID: 1873892137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_boss_36_4
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 7
+        width: 207
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096aaea1741e585408bef6e466eb109b
+      internalID: 730421449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_boss_36_5
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 7
+        width: 81
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac3c26e852cbca4b858a0ae41c8ce43
+      internalID: 1215159303
       vertices: []
       indices: 
       edges: []
@@ -210,10 +252,56 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dead_44_2: 963707946
-      dead_44_1: -494085127
-      dead_44_3: 1216818329
-      dead_44_0: -953265832
+      jump_boss_36_13: -257912611
+      jump_boss_36_20: 919456458
+      jump_boss_36_26: 1431631181
+      jump_boss_36_35: -1236268029
+      jump_boss_36_41: -1068981677
+      jump_boss_36_23: 609944187
+      jump_boss_36_45: 777790856
+      jump_boss_36_19: 379346562
+      jump_boss_36_14: 563741313
+      jump_boss_36_36: 1859449590
+      jump_boss_36_42: 450668033
+      jump_boss_36_47: -1240065847
+      jump_boss_36_38: 1333378630
+      jump_boss_36_22: -1534936225
+      jump_boss_36_24: -956974881
+      jump_boss_36_8: -1505652188
+      jump_boss_36_15: -344278023
+      jump_boss_36_46: 935053281
+      jump_boss_36_2: -503319601
+      jump_boss_36_18: -377394068
+      jump_boss_36_11: 916900916
+      jump_boss_36_21: -326488495
+      jump_boss_36_27: -2145345852
+      jump_boss_36_25: 1768202009
+      jump_boss_36_43: 1180712268
+      jump_boss_36_31: 1355400299
+      jump_boss_36_29: -1346378988
+      jump_boss_36_32: 1928560344
+      jump_boss_36_5: 1215159303
+      jump_boss_36_10: 1397649331
+      jump_boss_36_12: 2114792033
+      jump_boss_36_4: 730421449
+      jump_boss_36_37: 1418570141
+      jump_boss_36_49: -1872468133
+      jump_boss_36_1: 325141611
+      jump_boss_36_28: 526151296
+      jump_boss_36_0: 629528749
+      jump_boss_36_39: -1997920264
+      jump_boss_36_17: 479813297
+      jump_boss_36_9: -1308428897
+      jump_boss_36_30: -1670683311
+      jump_boss_36_40: -9514436
+      jump_boss_36_33: -1571255062
+      jump_boss_36_50: -1066116696
+      jump_boss_36_44: -1664929305
+      jump_boss_36_51: 934868015
+      jump_boss_36_34: 1080976180
+      jump_boss_36_3: 1873892137
+      jump_boss_36_16: 1338864864
+      jump_boss_36_48: 1775951524
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

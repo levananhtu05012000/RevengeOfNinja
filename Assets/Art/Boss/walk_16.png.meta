@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_16_10
+      name: walk_16_1
       rect:
         serializedVersion: 2
         x: 107
         y: 49
         width: 66
-        height: 104
+        height: 100
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,13 +137,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_16_21
+      name: walk_16_6
       rect:
         serializedVersion: 2
         x: 1549
         y: 49
         width: 78
-        height: 104
+        height: 100
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,13 +158,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_16_24
+      name: walk_16_2
       rect:
         serializedVersion: 2
         x: 396
         y: 49
         width: 69
-        height: 104
+        height: 99
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,13 +179,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_16_25
+      name: walk_16_3
       rect:
         serializedVersion: 2
         x: 685
         y: 49
-        width: 68
-        height: 104
+        width: 67
+        height: 100
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,13 +200,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_16_26
+      name: walk_16_4
       rect:
         serializedVersion: 2
         x: 973
         y: 49
         width: 70
-        height: 104
+        height: 99
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,13 +221,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_16_28
+      name: walk_16_5
       rect:
         serializedVersion: 2
         x: 1261
         y: 49
         width: 74
-        height: 104
+        height: 100
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,30 +256,24 @@ TextureImporter:
       walk_16_16: -1776768841
       walk_16_18: 1483705975
       walk_16_11: -408126205
-      walk_16_6: 569068713
+      walk_16_6: -1972722104
       walk_16_8: -494534106
       walk_16_23: -856631842
       walk_16_12: 1079331710
-      walk_16_21: -1972722104
       walk_16_22: -662078462
       walk_16_9: -1218522076
-      walk_16_2: 1841196587
+      walk_16_2: 1376527436
       walk_16_20: -1411095817
-      walk_16_5: -407378137
+      walk_16_5: -989693672
       walk_16_0: -604332732
       walk_16_14: 1889387249
-      walk_16_26: -2018500981
-      walk_16_28: -989693672
-      walk_16_4: -595121234
-      walk_16_10: -658933850
+      walk_16_4: -2018500981
       walk_16_19: 541177543
       walk_16_17: -1821638492
-      walk_16_25: -174263798
       walk_16_27: -733768318
-      walk_16_24: 1376527436
       walk_16_13: 808763956
-      walk_16_1: 1084602668
-      walk_16_3: 202275560
+      walk_16_1: -658933850
+      walk_16_3: -174263798
       walk_16_15: 655427352
   spritePackingTag: 
   pSDRemoveMatte: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cad32643d72c6fb4b8eaddfb1566cd92
+guid: f210989f79b9f2c4399b6167e9a0547d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,85 +116,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dead_44_0
+      name: transform_slime_25_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 1
-        width: 114
-        height: 121
+        x: 89
+        y: 34
+        width: 66
+        height: 41
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 121}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd21e478f8081424b983dc8a7183680c
-      internalID: -953265832
+      spriteID: 40e4d79ad2fd9e5438a4d953244ab7ac
+      internalID: -305642548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_1
+      name: transform_slime_25_1
       rect:
         serializedVersion: 2
-        x: 323
-        y: 1
-        width: 114
-        height: 85
+        x: 373
+        y: 34
+        width: 70
+        height: 38
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 85}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 940d112f296386e469e25af90fbe5b46
-      internalID: -494085127
+      spriteID: 3528b47bf85078245bfd83231118475f
+      internalID: 1520723480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_2
+      name: transform_slime_25_2
       rect:
         serializedVersion: 2
-        x: 611
-        y: 1
-        width: 114
-        height: 2
+        x: 656
+        y: 34
+        width: 83
+        height: 32
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 2}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb22a4a02b48c684d9bedc2ee43a69e5
-      internalID: 963707946
+      spriteID: 538fe8f109cb7d94c83790317cf8d207
+      internalID: -1144551190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_3
+      name: transform_slime_25_3
       rect:
         serializedVersion: 2
-        x: 899
-        y: 1
-        width: 114
-        height: 2
+        x: 940
+        y: 34
+        width: 91
+        height: 28
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 2}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00fcc46b8390e774e9cb815e71ca6526
-      internalID: 1216818329
+      spriteID: 8600a83b20cbab046824c9b383d18f22
+      internalID: -1023614132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transform_slime_25_4
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 34
+        width: 91
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2ac2464c6ce104a82250a7a7687518
+      internalID: 1652296626
       vertices: []
       indices: 
       edges: []
@@ -210,10 +231,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dead_44_2: 963707946
-      dead_44_1: -494085127
-      dead_44_3: 1216818329
-      dead_44_0: -953265832
+      transform_slime_25_4: 1652296626
+      transform_slime_25_1: 1520723480
+      transform_slime_25_0: -305642548
+      transform_slime_25_2: -1144551190
+      transform_slime_25_3: -1023614132
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

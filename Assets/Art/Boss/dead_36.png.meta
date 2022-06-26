@@ -125,7 +125,7 @@ TextureImporter:
         height: 117
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 117}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -146,7 +146,7 @@ TextureImporter:
         height: 123
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 123}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -161,13 +161,13 @@ TextureImporter:
       name: dead_36_1
       rect:
         serializedVersion: 2
-        x: 63
+        x: 62
         y: 1
         width: 125
         height: 113
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 113}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -188,7 +188,7 @@ TextureImporter:
         height: 115
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 115}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -204,12 +204,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 935
-        y: 1
+        y: 0
         width: 113
         height: 121
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 121}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -230,7 +230,7 @@ TextureImporter:
         height: 123
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 123}
       outline: []
       physicsShape: []
       tessellationDetail: 0

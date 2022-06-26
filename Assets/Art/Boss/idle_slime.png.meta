@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cad32643d72c6fb4b8eaddfb1566cd92
+guid: fd8cd397db205d14681fab9f2adac598
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,85 +116,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dead_44_0
+      name: idle_slime_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 1
-        width: 114
-        height: 121
+        x: 41
+        y: 11
+        width: 18
+        height: 27
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 121}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd21e478f8081424b983dc8a7183680c
-      internalID: -953265832
+      spriteID: cb69024ac67a37b4a8c51a90e938c5a9
+      internalID: 321337468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_1
+      name: idle_slime_1
       rect:
         serializedVersion: 2
-        x: 323
-        y: 1
-        width: 114
-        height: 85
+        x: 329
+        y: 11
+        width: 19
+        height: 29
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 85}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 940d112f296386e469e25af90fbe5b46
-      internalID: -494085127
+      spriteID: e7825cb93ed526442a58e5d6ae3552a9
+      internalID: 471066349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_2
+      name: idle_slime_2
       rect:
         serializedVersion: 2
-        x: 611
-        y: 1
-        width: 114
-        height: 2
+        x: 618
+        y: 11
+        width: 19
+        height: 30
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 2}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb22a4a02b48c684d9bedc2ee43a69e5
-      internalID: 963707946
+      spriteID: d89f015899fbc76478bdf6cb95634a71
+      internalID: 267987538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_3
+      name: idle_slime_3
       rect:
         serializedVersion: 2
-        x: 899
-        y: 1
-        width: 114
-        height: 2
+        x: 906
+        y: 11
+        width: 14
+        height: 30
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 2}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00fcc46b8390e774e9cb815e71ca6526
-      internalID: 1216818329
+      spriteID: dbfe72d987539ec409c53ec29a251fd2
+      internalID: 476466672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_slime_4
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 11
+        width: 25
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9da4daf42a1de942beeccf8f9eea256
+      internalID: -625857853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_slime_5
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 11
+        width: 19
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dfc13de7e016549bd1a4c4a821b65e
+      internalID: 2097747651
       vertices: []
       indices: 
       edges: []
@@ -210,10 +252,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dead_44_2: 963707946
-      dead_44_1: -494085127
-      dead_44_3: 1216818329
-      dead_44_0: -953265832
+      idle_slime_1: 471066349
+      idle_slime_6: 776347054
+      idle_slime_2: 267987538
+      idle_slime_3: 476466672
+      idle_slime_4: -625857853
+      idle_slime_5: 2097747651
+      idle_slime_0: 321337468
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

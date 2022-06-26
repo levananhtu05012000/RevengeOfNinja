@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cad32643d72c6fb4b8eaddfb1566cd92
+guid: c8f498e1954312644b7f3a8223ff9bd8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,85 +116,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dead_44_0
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 1
-        width: 114
-        height: 121
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 121}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd21e478f8081424b983dc8a7183680c
-      internalID: -953265832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dead_44_1
+      name: transform_slime_55_2
       rect:
         serializedVersion: 2
         x: 323
-        y: 1
-        width: 114
+        y: 7
+        width: 95
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde34aea8feef0944a3c0bc628582c1a
+      internalID: 1304993937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transform_slime_55_3
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 7
+        width: 97
         height: 85
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 85}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 940d112f296386e469e25af90fbe5b46
-      internalID: -494085127
+      spriteID: df0e882e423feaa42a4f06afad24601f
+      internalID: -1174847387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_2
+      name: transform_slime_55_4
       rect:
         serializedVersion: 2
-        x: 611
-        y: 1
-        width: 114
-        height: 2
+        x: 895
+        y: 7
+        width: 99
+        height: 90
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 2}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb22a4a02b48c684d9bedc2ee43a69e5
-      internalID: 963707946
+      spriteID: e44890daf9e4d994b8e3dac90aeb57f6
+      internalID: -1040419482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_3
+      name: transform_slime_55_5
       rect:
         serializedVersion: 2
-        x: 899
-        y: 1
-        width: 114
-        height: 2
+        x: 1181
+        y: 7
+        width: 101
+        height: 92
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 2}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00fcc46b8390e774e9cb815e71ca6526
-      internalID: 1216818329
+      spriteID: 16dc28d2097c70649a095f23968a3132
+      internalID: 1760595033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: transform_slime_55_1
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 7
+        width: 84
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b5d5ee4b8f46341b41a72097480090
+      internalID: 1362320191
       vertices: []
       indices: 
       edges: []
@@ -210,10 +231,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dead_44_2: 963707946
-      dead_44_1: -494085127
-      dead_44_3: 1216818329
-      dead_44_0: -953265832
+      transform_slime_55_5: 1760595033
+      transform_slime_55_4: -1040419482
+      transform_slime_55_2: 1304993937
+      transform_slime_55_6: -358746278
+      transform_slime_55_0: -1065806009
+      transform_slime_55_1: 1362320191
+      transform_slime_55_3: -1174847387
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

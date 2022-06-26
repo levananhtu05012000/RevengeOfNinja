@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class Boss_HealthBar : MonoBehaviour
 {
-    public float maxHealth = 50;
+    public float maxHealth = 200;
     private Slider slider;
     private float currHealth;
     private GameObject floatingTextPrefab;
     private Animator anim;
-    private string healbarPrefabLocation = "Prefabs/Healthbar";
+    private string healbarPrefabLocation = "Prefabs/Healthbar_Boss";
     private string floatingTextPrefabLocation = "Prefabs/FloatingText";
+    public bool isVulnerable = false;
 
     void Awake()
     {
@@ -27,9 +28,17 @@ public class Boss_HealthBar : MonoBehaviour
 
     public void TakeDamage(float damage, bool isCrit)
     {
+        if (isVulnerable)
+            return;
+        
         currHealth -= damage;
         ShowDamage(damage, isCrit);
         SetHealth(currHealth);
+
+        if (currHealth <= 100)
+        {
+            anim.SetTrigger("isEnrange");
+        }
         if (currHealth <= 0)
         {
             // dead

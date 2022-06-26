@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cad32643d72c6fb4b8eaddfb1566cd92
+guid: 682609d9ee6bfd24a9ebe078197baee3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,85 +116,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dead_44_0
+      name: skill1_boss_25_3
       rect:
         serializedVersion: 2
-        x: 35
-        y: 1
-        width: 114
-        height: 121
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 121}
+        x: 559
+        y: 13
+        width: 113
+        height: 137
+      alignment: 9
+      pivot: {x: 0.6877517, y: -0.000097720294}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd21e478f8081424b983dc8a7183680c
-      internalID: -953265832
+      spriteID: 3a2ac99902060394583e7b31069ffac8
+      internalID: 693983430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_1
+      name: skill1_boss_25_1
       rect:
         serializedVersion: 2
-        x: 323
-        y: 1
-        width: 114
-        height: 85
+        x: 20
+        y: 13
+        width: 73
+        height: 102
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 85}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 940d112f296386e469e25af90fbe5b46
-      internalID: -494085127
+      spriteID: 425310d08cdedd84a9d2518c5e619b7c
+      internalID: 2114346139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_2
+      name: skill1_boss_25_2
       rect:
         serializedVersion: 2
-        x: 611
-        y: 1
-        width: 114
-        height: 2
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 2}
+        x: 304
+        y: 13
+        width: 80
+        height: 109
+      alignment: 9
+      pivot: {x: 0.5586399, y: -0.00002507551}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb22a4a02b48c684d9bedc2ee43a69e5
-      internalID: 963707946
+      spriteID: 14e226872ec9eac40acbfe7c7d0cb8d8
+      internalID: -61298384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_44_3
+      name: skill1_boss_25_4
       rect:
         serializedVersion: 2
-        x: 899
-        y: 1
-        width: 114
-        height: 2
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 2}
+        x: 830
+        y: 13
+        width: 131
+        height: 147
+      alignment: 9
+      pivot: {x: 0.7230425, y: -0.00010947792}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00fcc46b8390e774e9cb815e71ca6526
-      internalID: 1216818329
+      spriteID: 07292fb5dd585204b8e454f2b7ee6ae3
+      internalID: 1071770849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill1_boss_25_5
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 13
+        width: 146
+        height: 144
+      alignment: 9
+      pivot: {x: 0.75147486, y: 0.00006253189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3774bb8ec39450f4ba26684468e0bb5e
+      internalID: -1695947022
       vertices: []
       indices: 
       edges: []
@@ -210,10 +231,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dead_44_2: 963707946
-      dead_44_1: -494085127
-      dead_44_3: 1216818329
-      dead_44_0: -953265832
+      skill1_boss_25_9: -1695947022
+      skill1_boss_25_11: 2114346139
+      skill1_boss_25_3: 693983430
+      skill1_boss_25_5: -1695947022
+      skill1_boss_25_6: -61298384
+      skill1_boss_25_1: 2114346139
+      skill1_boss_25_4: 1071770849
+      skill1_boss_25_2: -61298384
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

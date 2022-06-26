@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cadfc5cbbd8da9c42b992ed55dd3f5a2
+guid: 4417606d34036964c8bf7dd32d42ede8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,118 +116,118 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_16_7
+      name: skill1_boss_45_2
       rect:
         serializedVersion: 2
-        x: 102
-        y: 44
-        width: 85
-        height: 99
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 301
+        y: 12
+        width: 162
+        height: 107
+      alignment: 9
+      pivot: {x: 0.7690754, y: -0.00017128704}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b868c4e9db80464f8ea881b5ea79f9e
-      internalID: 1088287677
+      spriteID: 7482868d674727e46bc74d612b68cf85
+      internalID: -1254302335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_16_8
+      name: skill1_boss_45_1
       rect:
         serializedVersion: 2
-        x: 390
-        y: 44
-        width: 80
-        height: 99
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 13
+        y: 12
+        width: 161
+        height: 106
+      alignment: 9
+      pivot: {x: 0.77396244, y: 0.0002070373}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7705e12ffd797144b06aad4284f3ba0
-      internalID: -2062528026
+      spriteID: 27aed7197b9e5ae43ba598e6da1d51f3
+      internalID: 212232143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_16_9
+      name: skill1_boss_45_3
       rect:
         serializedVersion: 2
-        x: 678
-        y: 44
-        width: 80
-        height: 100
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 591
+        y: 12
+        width: 159
+        height: 103
+      alignment: 9
+      pivot: {x: 0.77105063, y: 0.00026814913}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e7d6da6b1af23e40a07f036d26fb980
-      internalID: 1643896327
+      spriteID: f85084615149d33478f652c46b7499b4
+      internalID: 360612787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_16_10
+      name: skill1_boss_45_4
       rect:
         serializedVersion: 2
-        x: 968
-        y: 44
-        width: 73
-        height: 99
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 880
+        y: 12
+        width: 158
+        height: 105
+      alignment: 9
+      pivot: {x: 0.7696197, y: -0.00019049871}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a972fdb623eff2140ae6e982503e9484
-      internalID: 857805509
+      spriteID: ac63750db75bf9946ae83bfe923263ba
+      internalID: 1152981326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_16_11
+      name: skill1_boss_45_5
       rect:
         serializedVersion: 2
-        x: 1256
-        y: 45
-        width: 71
-        height: 99
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1168
+        y: 12
+        width: 158
+        height: 104
+      alignment: 9
+      pivot: {x: 0.7694571, y: -0.00022256374}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ba24c4b7b2ede74cada414764a8ffbb
-      internalID: 6193114
+      spriteID: da86b36a7b9b2d54281b458f724e6874
+      internalID: -353401293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_16_12
+      name: skill1_boss_45_6
       rect:
         serializedVersion: 2
-        x: 1545
-        y: 44
-        width: 68
-        height: 99
+        x: 1538
+        y: 12
+        width: 76
+        height: 103
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c80956b8dda565c49aae434b25d6ff04
-      internalID: 1396425926
+      spriteID: b2b369269e535644983670bcdaf46b5b
+      internalID: -1942688138
       vertices: []
       indices: 
       edges: []
@@ -252,35 +252,66 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walk_26_6: -2022140270
-      walk_26_1: 252980286
-      walk_26_14: 594440388
-      walk_26_7: 1642264917
-      walk_26_23: -135821747
-      walk_16_7: 1088287677
-      walk_26_16: 874767237
-      walk_16_11: 6193114
-      walk_26_28: -758557934
-      walk_16_8: -2062528026
-      walk_26_19: -1195879586
-      walk_16_12: 1396425926
-      walk_26_20: -750828681
-      walk_16_9: 1643896327
-      walk_26_0: 1815682336
-      walk_26_8: -1965699322
-      walk_26_11: -854221756
-      walk_26_18: -2109010714
-      walk_26_12: -1813877714
-      walk_26_15: -1238374760
-      walk_26_4: 1697378791
-      walk_16_10: 857805509
-      walk_26_9: 354199189
-      walk_26_3: -1669852487
-      walk_26_5: -374043611
-      walk_26_2: 1337865598
-      walk_26_13: -1226536656
-      walk_26_17: 1797086594
-      walk_26_10: -1775172586
+      skill1_boss_45_29: -75714164
+      skill1_boss_45_57: -1481217455
+      skill1_boss_45_35: -1353560896
+      skill1_boss_45_46: -762110476
+      skill1_boss_45_31: 903295535
+      skill1_boss_45_63: -1135457362
+      skill1_boss_45_25: -702538054
+      skill1_boss_45_41: -1976890297
+      skill1_boss_45_26: -812875696
+      skill1_boss_45_62: -1598763259
+      skill1_boss_45_15: 800043094
+      skill1_boss_45_39: -1196315197
+      skill1_boss_45_59: 1957895115
+      skill1_boss_45_53: -453795255
+      skill1_boss_45_4: 1152981326
+      skill1_boss_45_36: 2057628688
+      skill1_boss_45_13: -887797375
+      skill1_boss_45_45: -168199186
+      skill1_boss_45_56: 1832303342
+      skill1_boss_45_38: -293787624
+      skill1_boss_45_40: 965184681
+      skill1_boss_45_44: -1324330534
+      skill1_boss_45_60: -462669567
+      skill1_boss_45_2: -1254302335
+      skill1_boss_45_18: 416789850
+      skill1_boss_45_10: 1807218860
+      skill1_boss_45_30: -1279415525
+      skill1_boss_45_11: 627043446
+      skill1_boss_45_32: 636413602
+      skill1_boss_45_61: -505695259
+      skill1_boss_45_51: 293150981
+      skill1_boss_45_27: -1881500399
+      skill1_boss_45_8: 1024812491
+      skill1_boss_45_55: 2118990600
+      skill1_boss_45_48: -585841805
+      skill1_boss_45_7: 1634864671
+      skill1_boss_45_54: 19011629
+      skill1_boss_45_1: 212232143
+      skill1_boss_45_50: 1664380759
+      skill1_boss_45_47: 737332381
+      skill1_boss_45_49: -1647529870
+      skill1_boss_45_52: -1504597116
+      skill1_boss_45_5: -353401293
+      skill1_boss_45_43: 1100556594
+      skill1_boss_45_6: -1942688138
+      skill1_boss_45_22: -514801557
+      skill1_boss_45_37: 1355109387
+      skill1_boss_45_3: 360612787
+      skill1_boss_45_34: -1554234135
+      skill1_boss_45_64: -49592885
+      skill1_boss_45_42: 855343372
+      skill1_boss_45_24: 1797357994
+      skill1_boss_45_58: 695140236
+      skill1_boss_45_0: -1480146920
+      skill1_boss_45_33: 1576521550
+      skill1_boss_45_9: -1841341568
+      skill1_boss_45_20: 22284633
+      skill1_boss_45_12: -2046601828
+      skill1_boss_45_23: -722513245
+      skill1_boss_45_28: -1541123053
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
