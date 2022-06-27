@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dca9dc065779c0a4cbd37e7f7d74a0f0
+guid: aadbc827a8b38ef48b24c39801ca5371
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,106 +116,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack_25_1
+      name: skill2_boss_16_1
       rect:
         serializedVersion: 2
-        x: 351
-        y: 19
-        width: 87
+        x: 27
+        y: 21
+        width: 148
         height: 109
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d0f041d951634843bf15c83873b2897
-      internalID: 1761732323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack_25_2
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 19
-        width: 86
-        height: 114
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a43c4665361d3a4287e645675d32b08
-      internalID: 1316707711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack_25_3
-      rect:
-        serializedVersion: 2
-        x: 928
-        y: 19
-        width: 86
-        height: 111
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9bee9cf235275584291e6150117d8de1
-      internalID: 2101864621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack_25_0
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 19
-        width: 89
-        height: 105
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6bbb6b7879a6b0429d7acbe984aca9c
-      internalID: -1264439223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: attack_25_7
-      rect:
-        serializedVersion: 2
-        x: 1125
-        y: 19
-        width: 153
-        height: 102
       alignment: 9
-      pivot: {x: 0.8815176, y: -0.00000011219698}
+      pivot: {x: 0.7546289, y: 0.00022158491}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69495b93406fa87408611614ee1a3440
-      internalID: -1306021288
+      spriteID: b072e498c71998e4e8330b9c0e82bc8d
+      internalID: 1494360165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill2_boss_16_2
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 21
+        width: 148
+        height: 108
+      alignment: 9
+      pivot: {x: 0.75478363, y: 0.000000017660636}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff4491927bd3b140bd24e302357ca30
+      internalID: -1444324189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill2_boss_16_3
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 21
+        width: 148
+        height: 111
+      alignment: 9
+      pivot: {x: 0.75474674, y: -0.00025252608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7317c44ff01c5b48910c6fea890c001
+      internalID: 1213596979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill2_boss_16_4
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 21
+        width: 148
+        height: 110
+      alignment: 9
+      pivot: {x: 0.75489104, y: -0.00013224862}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cce275b164870428818712fb2c0138
+      internalID: -1021343415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill2_boss_16_5
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 21
+        width: 148
+        height: 111
+      alignment: 9
+      pivot: {x: 0.75479704, y: -0.00025185593}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa9041d346dc1b41a0ecc4e9c66e7a9
+      internalID: 1895258897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill2_boss_16_6
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 21
+        width: 148
+        height: 106
+      alignment: 9
+      pivot: {x: 0.7548704, y: -0.000013099527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd35aa618f9d191429e5517c0944569d
+      internalID: -650496247
       vertices: []
       indices: 
       edges: []
@@ -231,16 +252,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      attack_25_7: -1306021288
-      attack_25_5: -863467994
-      attack_25_6: -1553376560
-      attack_25_2: 1316707711
-      attack_25_1: 1761732323
-      attack_25_4: 938717638
-      attack_25_0: -1264439223
-      attack_25_3: 2101864621
-      attack_25_11: -1839370547
-      attack_25_8: -806760897
+      skill2_boss_16_10: 954049278
+      skill2_boss_16_8: 1978946035
+      skill2_boss_16_5: 1895258897
+      skill2_boss_16_19: -1851068443
+      skill2_boss_16_4: -1021343415
+      skill2_boss_16_22: 1895258897
+      skill2_boss_16_1: 1494360165
+      skill2_boss_16_24: -650496247
+      skill2_boss_16_0: -1802265650
+      skill2_boss_16_11: 1101688692
+      skill2_boss_16_12: 200994461
+      skill2_boss_16_3: 1213596979
+      skill2_boss_16_6: -650496247
+      skill2_boss_16_21: -1380560904
+      skill2_boss_16_13: 957335576
+      skill2_boss_16_2: -1444324189
+      skill2_boss_16_17: -428337815
+      skill2_boss_16_9: 220603413
+      skill2_boss_16_7: -1513246366
+      skill2_boss_16_15: -1006446178
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

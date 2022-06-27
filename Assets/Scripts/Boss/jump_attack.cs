@@ -4,57 +4,47 @@ using UnityEngine;
 
 public class jump_attack : StateMachineBehaviour
 {
-
-    private Transform playerPos;
+    Rigidbody2D rb;
     public float speed;
-
-    private float timer;
-    public float minTime;
-    public float maxTime;
-
+    private Transform player;
+    //private float timer;
+    //public float minTime;
+    //public float maxTime;
+    private Vector2 target;
+    private Vector2 newPos;
     Boss boss;
-
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        timer = Random.Range(minTime, maxTime);
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = animator.GetComponent<Rigidbody2D>();
+        //timer = Random.Range(minTime, maxTime);
+        boss = animator.GetComponent<Boss>();
+        target = new Vector2(player.position.x, rb.position.y);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (timer <= 0)
-        {
-            animator.SetTrigger("Idle");
-        }
-        else
-        {
-            timer -= Time.deltaTime;
-        }
-
+        //if (timer <= 0)
+        //{
+        //    animator.SetTrigger("Idle");
+        //}
+        //else
+        //{
+        //    timer -= Time.deltaTime;
         boss.LookAtPlayer();
-
-        Vector2 target = new Vector2(playerPos.position.x, animator.transform.position.y);
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
+        newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
+        rb.MovePosition(newPos);
+        animator.SetTrigger("Idle");
+        //}
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        animator.ResetTrigger("Jump");
     }
 
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }

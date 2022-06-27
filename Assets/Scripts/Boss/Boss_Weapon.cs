@@ -22,7 +22,7 @@ public class Boss_Weapon : MonoBehaviour
 		if (colInfo != null)
 		{
 			//colInfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
-			Debug.Log(1);
+			Debug.Log("Hit player");
 		}
 	}
 
