@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Common;
 using UnityEngine;
 
 public class MushroomBehaviour : MonoBehaviour
@@ -36,7 +37,7 @@ public class MushroomBehaviour : MonoBehaviour
 
     private bool HasDetectPlayer()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        GameObject player = GameObject.FindGameObjectWithTag(Constants.TagPlayer);
         return Mathf.Abs(player.transform.position.x - originalPosition.x) <= detectDistance;
     }
 
@@ -46,7 +47,7 @@ public class MushroomBehaviour : MonoBehaviour
         animationController.SetBool("running", rb2d.velocity.sqrMagnitude >= 0.9);
         if (hasRun)
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            GameObject player = GameObject.FindGameObjectWithTag(Constants.TagPlayer);
             originalPosition = new Vector2(transform.position.x, transform.position.y);
             bool isRight = transform.position.x - player.transform.position.x >= 0;
             Flip(isRight);

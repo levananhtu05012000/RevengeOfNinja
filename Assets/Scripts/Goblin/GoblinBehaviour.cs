@@ -33,6 +33,9 @@ public class GoblinBehaviour : MonoBehaviour
             rb2d.velocity = Vector2.zero;
             yield return new WaitForSeconds(2);
             Flip();
+            // add new velocity
+            Vector2 direction = new Vector2(facingRight ? 1 : -1, 0);
+            rb2d.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
             yield return new WaitForSeconds(1);
         }
     }
@@ -46,7 +49,7 @@ public class GoblinBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animationController.SetBool("moving", rb2d.velocity.sqrMagnitude >= 0.9);
+        animationController.SetBool("moving", rb2d.velocity.sqrMagnitude >= 0.2);
     }
 
     void Flip()
@@ -57,8 +60,5 @@ public class GoblinBehaviour : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
-        // add new velocity
-        Vector2 direction = new Vector2(facingRight ? 1 : -1, 0);
-        rb2d.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
     }
 }
