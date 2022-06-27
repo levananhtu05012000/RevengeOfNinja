@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: 3c64fe0106346b545844f7e7e37bf4f8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dead_36_3
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 0
+        width: 119
+        height: 117
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 117}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98969337b24d8b48b76eee0e2a54dbf
+      internalID: -479573013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_36_6
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 1
+        width: 114
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 123}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e634050c801d99745be52ef5367180f0
+      internalID: -231336972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_36_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1
+        width: 125
+        height: 113
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 113}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c07997adf5074479be163d42c25c02
+      internalID: -411108824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_36_2
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1
+        width: 125
+        height: 115
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 115}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452e2d60cdc65c448867fc3104dd3783
+      internalID: -1984532944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_36_4
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 0
+        width: 113
+        height: 121
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 121}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803bf6154e94c2f4c9c7f1f92aa9f1d6
+      internalID: 2046491426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_36_5
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 1
+        width: 114
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 123}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76eded56aec47aa4d86e82d6dcd7f015
+      internalID: 1838514461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      dead_36_19: -1651862855
+      dead_36_26: -253582689
+      dead_36_31: 1041414417
+      dead_36_25: -1011451723
+      dead_36_7: 1413941630
+      dead_36_22: -2049607574
+      dead_36_53: 271554463
+      dead_36_1: -411108824
+      dead_36_16: 290450009
+      dead_36_46: 93580360
+      dead_36_6: -231336972
+      dead_36_42: 896124192
+      dead_36_23: -1132142609
+      dead_36_55: 882593810
+      dead_36_49: -1578428351
+      dead_36_36: -619822369
+      dead_36_30: -1878651898
+      dead_36_47: -1005048589
+      dead_36_33: 439027350
+      dead_36_0: -929719347
+      dead_36_48: -1437145907
+      dead_36_29: -1519966893
+      dead_36_28: 712734146
+      dead_36_35: 1501976695
+      dead_36_24: 1124058941
+      dead_36_2: -1984532944
+      dead_36_34: 795331395
+      dead_36_41: 1435910083
+      dead_36_43: 744839866
+      dead_36_45: -1029270897
+      dead_36_11: -784815772
+      dead_36_3: -479573013
+      dead_36_13: 1750619747
+      dead_36_4: 2046491426
+      dead_36_8: -2042497864
+      dead_36_10: -2041901416
+      dead_36_27: 91829580
+      dead_36_32: 1547659162
+      dead_36_12: -869381583
+      dead_36_21: 1381582096
+      dead_36_9: -698102585
+      dead_36_15: 309831011
+      dead_36_38: 725108285
+      dead_36_17: -1808234525
+      dead_36_44: 981183258
+      dead_36_54: 2138009884
+      dead_36_52: 1363072862
+      dead_36_20: 433929923
+      dead_36_50: 1559150385
+      dead_36_5: 1838514461
+      dead_36_14: 673026636
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
