@@ -116,12 +116,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_26_21
+      name: walk_16_7
       rect:
         serializedVersion: 2
         x: 102
         y: 44
-        width: 86
+        width: 85
         height: 99
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -137,7 +137,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_26_22
+      name: walk_16_8
       rect:
         serializedVersion: 2
         x: 390
@@ -158,7 +158,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_26_24
+      name: walk_16_9
       rect:
         serializedVersion: 2
         x: 678
@@ -179,7 +179,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_26_25
+      name: walk_16_10
       rect:
         serializedVersion: 2
         x: 968
@@ -200,13 +200,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_26_26
+      name: walk_16_11
       rect:
         serializedVersion: 2
         x: 1256
         y: 45
         width: 71
-        height: 100
+        height: 99
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,12 +221,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_26_27
+      name: walk_16_12
       rect:
         serializedVersion: 2
         x: 1545
         y: 44
-        width: 70
+        width: 68
         height: 99
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -255,17 +255,17 @@ TextureImporter:
       walk_26_6: -2022140270
       walk_26_1: 252980286
       walk_26_14: 594440388
-      walk_26_22: -2062528026
       walk_26_7: 1642264917
       walk_26_23: -135821747
-      walk_26_25: 857805509
+      walk_16_7: 1088287677
       walk_26_16: 874767237
+      walk_16_11: 6193114
       walk_26_28: -758557934
-      walk_26_27: 1396425926
+      walk_16_8: -2062528026
       walk_26_19: -1195879586
-      walk_26_21: 1088287677
-      walk_26_24: 1643896327
+      walk_16_12: 1396425926
       walk_26_20: -750828681
+      walk_16_9: 1643896327
       walk_26_0: 1815682336
       walk_26_8: -1965699322
       walk_26_11: -854221756
@@ -273,6 +273,7 @@ TextureImporter:
       walk_26_12: -1813877714
       walk_26_15: -1238374760
       walk_26_4: 1697378791
+      walk_16_10: 857805509
       walk_26_9: 354199189
       walk_26_3: -1669852487
       walk_26_5: -374043611
@@ -280,7 +281,6 @@ TextureImporter:
       walk_26_13: -1226536656
       walk_26_17: 1797086594
       walk_26_10: -1775172586
-      walk_26_26: 6193114
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
