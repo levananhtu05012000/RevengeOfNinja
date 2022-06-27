@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -122,9 +122,9 @@ TextureImporter:
         x: 106
         y: 21
         width: 80
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -137,15 +137,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: take_hit_5
+      name: take_hit_2
       rect:
         serializedVersion: 2
         x: 689
         y: 21
         width: 102
-        height: 92
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,15 +158,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: take_hit_11
+      name: take_hit_4
       rect:
         serializedVersion: 2
         x: 1258
         y: 21
         width: 80
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -179,15 +179,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: take_hit_14
+      name: take_hit_1
       rect:
         serializedVersion: 2
         x: 404
         y: 21
         width: 85
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -200,15 +200,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: take_hit_15
+      name: take_hit_3
       rect:
         serializedVersion: 2
         x: 975
-        y: 21
+        y: 22
         width: 90
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 102
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,20 +233,16 @@ TextureImporter:
     nameFileIdTable:
       take_hit_6: -73616838
       take_hit_7: -1752542240
-      take_hit_11: 1909775441
-      take_hit_2: -1082554173
+      take_hit_2: -1557111605
       take_hit_8: 680957863
       take_hit_9: -1801808111
       take_hit_16: -1764435005
       take_hit_10: -1173460545
-      take_hit_5: -1557111605
       take_hit_13: -1009578224
-      take_hit_4: -1816512050
-      take_hit_3: -763085682
-      take_hit_15: -1789462449
+      take_hit_4: 1909775441
+      take_hit_3: -1789462449
       take_hit_0: -783193133
-      take_hit_14: 915634850
-      take_hit_1: -151159003
+      take_hit_1: 915634850
       take_hit_12: -24612759
   spritePackingTag: 
   pSDRemoveMatte: 0

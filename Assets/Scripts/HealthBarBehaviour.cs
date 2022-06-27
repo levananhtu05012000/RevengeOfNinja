@@ -30,7 +30,7 @@ public class HealthBarBehaviour : MonoBehaviour
         SetHealth(currHealth);
         if (currHealth <= 0)
         {
-            // deadth
+            // dead
             Destroy(gameObject);
 
         }

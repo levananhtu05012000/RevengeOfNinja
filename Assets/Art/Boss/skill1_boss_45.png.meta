@@ -1,0 +1,320 @@
+fileFormatVersion: 2
+guid: 4417606d34036964c8bf7dd32d42ede8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skill1_boss_45_2
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 12
+        width: 162
+        height: 107
+      alignment: 9
+      pivot: {x: 0.7690754, y: -0.00017128704}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7482868d674727e46bc74d612b68cf85
+      internalID: -1254302335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill1_boss_45_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 12
+        width: 161
+        height: 106
+      alignment: 9
+      pivot: {x: 0.77396244, y: 0.0002070373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27aed7197b9e5ae43ba598e6da1d51f3
+      internalID: 212232143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill1_boss_45_3
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 12
+        width: 159
+        height: 103
+      alignment: 9
+      pivot: {x: 0.77105063, y: 0.00026814913}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85084615149d33478f652c46b7499b4
+      internalID: 360612787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill1_boss_45_4
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 12
+        width: 158
+        height: 105
+      alignment: 9
+      pivot: {x: 0.7696197, y: -0.00019049871}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac63750db75bf9946ae83bfe923263ba
+      internalID: 1152981326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill1_boss_45_5
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 12
+        width: 158
+        height: 104
+      alignment: 9
+      pivot: {x: 0.7694571, y: -0.00022256374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da86b36a7b9b2d54281b458f724e6874
+      internalID: -353401293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill1_boss_45_6
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 12
+        width: 76
+        height: 103
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b369269e535644983670bcdaf46b5b
+      internalID: -1942688138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      skill1_boss_45_29: -75714164
+      skill1_boss_45_57: -1481217455
+      skill1_boss_45_35: -1353560896
+      skill1_boss_45_46: -762110476
+      skill1_boss_45_31: 903295535
+      skill1_boss_45_63: -1135457362
+      skill1_boss_45_25: -702538054
+      skill1_boss_45_41: -1976890297
+      skill1_boss_45_26: -812875696
+      skill1_boss_45_62: -1598763259
+      skill1_boss_45_15: 800043094
+      skill1_boss_45_39: -1196315197
+      skill1_boss_45_59: 1957895115
+      skill1_boss_45_53: -453795255
+      skill1_boss_45_4: 1152981326
+      skill1_boss_45_36: 2057628688
+      skill1_boss_45_13: -887797375
+      skill1_boss_45_45: -168199186
+      skill1_boss_45_56: 1832303342
+      skill1_boss_45_38: -293787624
+      skill1_boss_45_40: 965184681
+      skill1_boss_45_44: -1324330534
+      skill1_boss_45_60: -462669567
+      skill1_boss_45_2: -1254302335
+      skill1_boss_45_18: 416789850
+      skill1_boss_45_10: 1807218860
+      skill1_boss_45_30: -1279415525
+      skill1_boss_45_11: 627043446
+      skill1_boss_45_32: 636413602
+      skill1_boss_45_61: -505695259
+      skill1_boss_45_51: 293150981
+      skill1_boss_45_27: -1881500399
+      skill1_boss_45_8: 1024812491
+      skill1_boss_45_55: 2118990600
+      skill1_boss_45_48: -585841805
+      skill1_boss_45_7: 1634864671
+      skill1_boss_45_54: 19011629
+      skill1_boss_45_1: 212232143
+      skill1_boss_45_50: 1664380759
+      skill1_boss_45_47: 737332381
+      skill1_boss_45_49: -1647529870
+      skill1_boss_45_52: -1504597116
+      skill1_boss_45_5: -353401293
+      skill1_boss_45_43: 1100556594
+      skill1_boss_45_6: -1942688138
+      skill1_boss_45_22: -514801557
+      skill1_boss_45_37: 1355109387
+      skill1_boss_45_3: 360612787
+      skill1_boss_45_34: -1554234135
+      skill1_boss_45_64: -49592885
+      skill1_boss_45_42: 855343372
+      skill1_boss_45_24: 1797357994
+      skill1_boss_45_58: 695140236
+      skill1_boss_45_0: -1480146920
+      skill1_boss_45_33: 1576521550
+      skill1_boss_45_9: -1841341568
+      skill1_boss_45_20: 22284633
+      skill1_boss_45_12: -2046601828
+      skill1_boss_45_23: -722513245
+      skill1_boss_45_28: -1541123053
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
