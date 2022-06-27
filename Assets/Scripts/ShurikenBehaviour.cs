@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Common;
 using UnityEngine;
 
 public class ShurikenBehaviour : MonoBehaviour
@@ -38,7 +39,7 @@ public class ShurikenBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
-        if (collision.gameObject.CompareTag("Creep"))
+        if (collision.gameObject.CompareTag(Constants.TagCreep))
         {
             collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(20, isCrit);
         }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dcd973685a58c2f4d9130928e3ce38ca
+guid: 67c542d6fd9ab92419803264df6bd3c4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -120,7 +120,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1558
-        y: 1
+        y: 0
         width: 95
         height: 113
       alignment: 7
@@ -221,7 +221,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dead_16_2
+      name: dead_16_
       rect:
         serializedVersion: 2
         x: 397
@@ -255,11 +255,11 @@ TextureImporter:
       dead_16_13: 1480665376
       dead_16_7: 338560089
       dead_16_0: 1976085624
-      dead_16_2: 388232874
       dead_16_4: -1050187740
       dead_16_3: 1465273753
       dead_16_6: 622252349
       dead_16_10: 562301435
+      dead_16_: 388232874
       dead_16_5: 508003851
       dead_16_1: -1237860408
   spritePackingTag: 
