@@ -36,6 +36,20 @@ public class ShurikenBehaviour : MonoBehaviour
 
     }
 
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    Destroy(gameObject);
+    //    if (collision.gameObject.CompareTag(Constants.TagCreep))
+    //    {
+    //        collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(20, isCrit);
+    //    }
+    //    if (collision.gameObject.CompareTag("Boss"))
+    //    {
+    //        collision.gameObject.GetComponent<Boss_HealthBar>().TakeDamage(20, isCrit);
+    //        anim.SetTrigger("Takehit");
+    //    }
+    //}
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
