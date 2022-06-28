@@ -16,8 +16,8 @@ public class BuffController : MonoBehaviour
 
     }
 
-    public void CollectBuffHP()
+    public bool CollectBuffHP()
     {
-        GetComponent<HealthBarBehaviour>().BuffHP(12);
+        return GetComponent<HealthBarBehaviour>().BuffHP(12);
     }
 }
