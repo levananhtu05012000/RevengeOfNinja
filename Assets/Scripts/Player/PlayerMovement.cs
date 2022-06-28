@@ -24,6 +24,11 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isTouchControl = false;
 
+    [SerializeField]
+    private GameObject trailEffectPrefab;
+    private float timeBtwTrailEffect = 0.02f;
+    private float countdownTimeBtwTrailEffect = 0f;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -57,6 +62,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            GetComponent<HealthBarBehaviour>().TakeDamage(10, false);
+        }
+    }
+
+    private void FixedUpdate()
+    {
         if (!isDashing)
         {
             rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
@@ -65,10 +78,21 @@ public class PlayerMovement : MonoBehaviour
             anim.SetFloat("moveY", rb.velocity.y > 1 ? 1 : (rb.velocity.y < -1 ? -1 : 0));
         }
 
-
-        if (Input.GetKeyDown(KeyCode.T))
+        if (countdownTimeBtwTrailEffect <= 0)
         {
-            GetComponent<HealthBarBehaviour>().TakeDamage(10, false);
+            countdownTimeBtwTrailEffect = timeBtwTrailEffect;
+            if (isDashing)
+            {
+                GameObject trail = Instantiate(trailEffectPrefab, transform.position, Quaternion.identity);
+                Destroy(trail, 3f);
+                Vector3 newScale = gameObject.transform.localScale;
+                newScale.x = dirX;
+                trail.transform.localScale = newScale;
+            }
+        }
+        else
+        {
+            countdownTimeBtwTrailEffect -= Time.fixedDeltaTime;
         }
     }
 
@@ -102,11 +126,18 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("BuffHP"))
         {
-            GetComponent<BuffController>().CollectBuffHP();
-            Destroy(collision.gameObject);
+            if (GetComponent<BuffController>().CollectBuffHP())
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 
-
+    private void OnDrawGizmosSelected()
+    {
+        Transform swordPoint = transform.Find("SwordPoint").transform;
+        if (!swordPoint) return;
+        Gizmos.DrawWireSphere(swordPoint.position, 0.33f);
+    }
 
 }

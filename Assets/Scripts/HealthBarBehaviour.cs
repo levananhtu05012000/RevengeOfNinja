@@ -67,17 +67,25 @@ public class HealthBarBehaviour : MonoBehaviour
         Destroy(floatDamage, 1f);
     }
 
-    public void BuffHP(float buffHP)
+    public bool BuffHP(float buffHP)
     {
+        if (currHealth >= maxHealth) return false;
         currHealth += buffHP;
         if (currHealth >= maxHealth) currHealth = maxHealth;
         SetHealth(currHealth);
+        return true;
     }
 
 
     public void SetHealth(float HP)
     {
         slider.value = HP;
+    }
+
+    public void ResetMaxHealth()
+    {
+        SetHealth(maxHealth);
+        currHealth = maxHealth;
     }
 
     // Update is called once per frame

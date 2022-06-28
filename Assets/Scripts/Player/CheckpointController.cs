@@ -35,6 +35,7 @@ public class CheckpointController : MonoBehaviour
     {
         if (lifeCount > 0)
         {
+            GetComponent<HealthBarBehaviour>().ResetMaxHealth();
             transform.position = currentCheckpoint.transform.position;
             lifeCount--;
         }
