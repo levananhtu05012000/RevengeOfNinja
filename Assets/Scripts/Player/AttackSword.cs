@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "PlayerSkill", menuName = "PlayerSkill/AttackSword", order = 1)]
 public class AttackSword : Skill
 {
     public override void Activate(GameObject parent)

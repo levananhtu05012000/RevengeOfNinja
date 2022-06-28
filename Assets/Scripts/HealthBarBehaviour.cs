@@ -11,10 +11,21 @@ public class HealthBarBehaviour : MonoBehaviour
     private GameObject floatingTextPrefab;
     private string healbarPrefabLocation = "Prefabs/Healthbar";
     private string floatingTextPrefabLocation = "Prefabs/FloatingText";
+    private string playerHealbarPrefabLocation = "Prefabs/PlayerHealthBarCanvas";
 
     void Awake()
     {
-        GameObject healthBarCanvas = Instantiate((GameObject)Resources.Load(healbarPrefabLocation, typeof(GameObject)));
+        GameObject healthBarCanvas;
+        if (gameObject.CompareTag("Player"))
+        {
+            healthBarCanvas = Instantiate((GameObject)Resources.Load(playerHealbarPrefabLocation, typeof(GameObject)));
+        }
+        else
+        {
+            healthBarCanvas = Instantiate((GameObject)Resources.Load(healbarPrefabLocation, typeof(GameObject)));
+        }
+
+
         floatingTextPrefab = (GameObject)Resources.Load(floatingTextPrefabLocation, typeof(GameObject));
         healthBarCanvas.transform.parent = transform;
         slider = healthBarCanvas.GetComponentInChildren<Slider>();
@@ -30,8 +41,14 @@ public class HealthBarBehaviour : MonoBehaviour
         SetHealth(currHealth);
         if (currHealth <= 0)
         {
-            // dead
-            Destroy(gameObject);
+            if (gameObject.CompareTag("Player"))
+            {
+                GetComponent<CheckpointController>().Respawn();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
 
         }
     }
@@ -50,6 +67,13 @@ public class HealthBarBehaviour : MonoBehaviour
         Destroy(floatDamage, 1f);
     }
 
+    public void BuffHP(float buffHP)
+    {
+        currHealth += buffHP;
+        if (currHealth >= maxHealth) currHealth = maxHealth;
+        SetHealth(currHealth);
+    }
+
 
     public void SetHealth(float HP)
     {
@@ -64,6 +88,9 @@ public class HealthBarBehaviour : MonoBehaviour
 
     void LateUpdate()
     {
-        slider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0f, 0.5f, 0f));
+        if (!gameObject.CompareTag("Player"))
+        {
+            slider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0f, 0.5f, 0f));
+        }
     }
 }

@@ -56,4 +56,14 @@ public class SkillHolder : MonoBehaviour
                 break;
         }
     }
+
+    public void CastSkill()
+    {
+        if (state == SkillState.ready)
+        {
+            skill.Activate(gameObject);
+            state = SkillState.active;
+            _activeTime = skill.activeTime;
+        }
+    }
 }

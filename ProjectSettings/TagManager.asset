@@ -10,6 +10,8 @@ TagManager:
   - Fireball
   - Goblin
   - FlyingEye
+  - Checkpoint
+  - BuffHP
   layers:
   - Default
   - TransparentFX

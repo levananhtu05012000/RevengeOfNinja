@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public bool isDashing = false;
 
+    private bool isTouchControl = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -35,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        dirX = Input.GetAxisRaw("Horizontal");
+        if (!isTouchControl) dirX = Input.GetAxisRaw("Horizontal");
 
         if (dirX != 0)
         {
@@ -63,6 +64,27 @@ public class PlayerMovement : MonoBehaviour
             anim.SetFloat("moveX", Mathf.Abs(rb.velocity.x) != 0 ? 1 : 0.08f);
             anim.SetFloat("moveY", rb.velocity.y > 1 ? 1 : (rb.velocity.y < -1 ? -1 : 0));
         }
+
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            GetComponent<HealthBarBehaviour>().TakeDamage(10, false);
+        }
+    }
+
+    public void BuuttonJumpClicked()
+    {
+        if (jumpCount > 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpCount--;
+        }
+    }
+
+    public void SetDirX(float value)
+    {
+        dirX = value;
+        isTouchControl = value != 0;
     }
 
 
@@ -70,4 +92,21 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Checkpoint"))
+        {
+            GetComponent<CheckpointController>().ChangeCheckpoint(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("BuffHP"))
+        {
+            GetComponent<BuffController>().CollectBuffHP();
+            Destroy(collision.gameObject);
+        }
+    }
+
+
+
 }

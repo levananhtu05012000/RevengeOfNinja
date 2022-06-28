@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "PlayerSkill", menuName = "PlayerSkill/ThrowShuriken", order = 3)]
 public class ThrowShuriken : Skill
 {
     public float shurikenSpeed;
