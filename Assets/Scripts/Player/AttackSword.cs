@@ -19,12 +19,12 @@ public class AttackSword : Skill
 
         anim.SetTrigger("attack");
 
-        float critRate = 50f;
+        float critRate = DataManager.Instance.gameData.playerCritRate;
         bool isCrit = Random.Range(0, 100) <= critRate;
         if (isCrit)
-            anim.SetFloat("attackState", 1);
-        else
             anim.SetFloat("attackState", 2);
+        else
+            anim.SetFloat("attackState", 1);
 
         // Xác định địch dính chiêu
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(swordPoint.position, attackRange, enemyLayers);
@@ -34,7 +34,7 @@ public class AttackSword : Skill
         {
             Debug.Log(enemy.name);
 
-            int swordDamage = Random.Range(2, 3);
+            float swordDamage = DataManager.Instance.gameData.playerDamage;
 
             enemy.GetComponent<HealthBarBehaviour>().TakeDamage(swordDamage, isCrit);
         }

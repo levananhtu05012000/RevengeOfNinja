@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
-            GetComponent<CheckpointController>().ChangeCheckpoint(collision.gameObject);
+            GetComponent<BuffController>().ChangeCheckpoint(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("BuffHP"))
         {
@@ -130,6 +130,18 @@ public class PlayerMovement : MonoBehaviour
             {
                 Destroy(collision.gameObject);
             }
+        }
+
+        if (collision.gameObject.CompareTag("BuffShuriken"))
+        {
+            Destroy(collision.gameObject);
+            GetComponent<BuffController>().CollectShuriken();
+        }
+
+        if (collision.gameObject.CompareTag("BuffEXP"))
+        {
+            Destroy(collision.gameObject);
+            GetComponent<BuffController>().CollectEXP();
         }
     }
 
