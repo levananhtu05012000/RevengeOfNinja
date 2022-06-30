@@ -12,6 +12,8 @@ TagManager:
   - FlyingEye
   - Checkpoint
   - BuffHP
+  - BuffShuriken
+  - BuffEXP
   layers:
   - Default
   - TransparentFX

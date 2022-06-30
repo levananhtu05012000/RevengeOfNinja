@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthBarBehaviour : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class HealthBarBehaviour : MonoBehaviour
         if (gameObject.CompareTag("Player"))
         {
             healthBarCanvas = Instantiate((GameObject)Resources.Load(playerHealbarPrefabLocation, typeof(GameObject)));
+            maxHealth = DataManager.Instance.gameData.playerMaxHealth;
+
         }
         else
         {
@@ -36,6 +39,11 @@ public class HealthBarBehaviour : MonoBehaviour
 
     public void TakeDamage(float damage, bool isCrit)
     {
+        if (isCrit)
+        {
+            damage = Mathf.Ceil(damage * DataManager.Instance.gameData.playerCritDamage);
+        }
+
         currHealth -= damage;
         ShowDamage(damage, isCrit);
         SetHealth(currHealth);
@@ -43,7 +51,7 @@ public class HealthBarBehaviour : MonoBehaviour
         {
             if (gameObject.CompareTag("Player"))
             {
-                GetComponent<CheckpointController>().Respawn();
+                GetComponent<BuffController>().Respawn();
             }
             else
             {
@@ -59,10 +67,10 @@ public class HealthBarBehaviour : MonoBehaviour
 
         GameObject floatDamage = Instantiate(floatingTextPrefab, transform.position + offset, Quaternion.identity);
 
-        floatDamage.GetComponentInChildren<TextMesh>().text = damage.ToString();
+        floatDamage.GetComponentInChildren<TextMeshPro>().text = damage.ToString();
         if (isCrit)
         {
-            floatDamage.GetComponentInChildren<TextMesh>().color = Color.red;
+            floatDamage.GetComponentInChildren<TextMeshPro>().color = Color.red;
         }
         Destroy(floatDamage, 1f);
     }
