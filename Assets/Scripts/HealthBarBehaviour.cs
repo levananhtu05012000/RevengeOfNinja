@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthBarBehaviour : MonoBehaviour
 {
@@ -11,10 +12,23 @@ public class HealthBarBehaviour : MonoBehaviour
     private GameObject floatingTextPrefab;
     private string healbarPrefabLocation = "Prefabs/Healthbar";
     private string floatingTextPrefabLocation = "Prefabs/FloatingText";
+    private string playerHealbarPrefabLocation = "Prefabs/PlayerHealthBarCanvas";
 
     void Awake()
     {
-        GameObject healthBarCanvas = Instantiate((GameObject)Resources.Load(healbarPrefabLocation, typeof(GameObject)));
+        GameObject healthBarCanvas;
+        if (gameObject.CompareTag("Player"))
+        {
+            healthBarCanvas = Instantiate((GameObject)Resources.Load(playerHealbarPrefabLocation, typeof(GameObject)));
+            maxHealth = DataManager.Instance.gameData.playerMaxHealth;
+
+        }
+        else
+        {
+            healthBarCanvas = Instantiate((GameObject)Resources.Load(healbarPrefabLocation, typeof(GameObject)));
+        }
+
+
         floatingTextPrefab = (GameObject)Resources.Load(floatingTextPrefabLocation, typeof(GameObject));
         healthBarCanvas.transform.parent = transform;
         slider = healthBarCanvas.GetComponentInChildren<Slider>();
@@ -25,13 +39,24 @@ public class HealthBarBehaviour : MonoBehaviour
 
     public void TakeDamage(float damage, bool isCrit)
     {
+        if (isCrit)
+        {
+            damage = Mathf.Ceil(damage * DataManager.Instance.gameData.playerCritDamage);
+        }
+
         currHealth -= damage;
         ShowDamage(damage, isCrit);
         SetHealth(currHealth);
         if (currHealth <= 0)
         {
-            // dead
-            Destroy(gameObject);
+            if (gameObject.CompareTag("Player"))
+            {
+                GetComponent<BuffController>().Respawn();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
 
         }
     }
@@ -42,18 +67,33 @@ public class HealthBarBehaviour : MonoBehaviour
 
         GameObject floatDamage = Instantiate(floatingTextPrefab, transform.position + offset, Quaternion.identity);
 
-        floatDamage.GetComponentInChildren<TextMesh>().text = damage.ToString();
+        floatDamage.GetComponentInChildren<TextMeshPro>().text = damage.ToString();
         if (isCrit)
         {
-            floatDamage.GetComponentInChildren<TextMesh>().color = Color.red;
+            floatDamage.GetComponentInChildren<TextMeshPro>().color = Color.red;
         }
         Destroy(floatDamage, 1f);
+    }
+
+    public bool BuffHP(float buffHP)
+    {
+        if (currHealth >= maxHealth) return false;
+        currHealth += buffHP;
+        if (currHealth >= maxHealth) currHealth = maxHealth;
+        SetHealth(currHealth);
+        return true;
     }
 
 
     public void SetHealth(float HP)
     {
         slider.value = HP;
+    }
+
+    public void ResetMaxHealth()
+    {
+        SetHealth(maxHealth);
+        currHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -64,6 +104,9 @@ public class HealthBarBehaviour : MonoBehaviour
 
     void LateUpdate()
     {
-        slider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0f, 0.5f, 0f));
+        if (!gameObject.CompareTag("Player"))
+        {
+            slider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0f, 0.5f, 0f));
+        }
     }
 }

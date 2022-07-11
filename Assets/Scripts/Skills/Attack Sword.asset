@@ -15,3 +15,7 @@ MonoBehaviour:
   name: 
   cooldownTime: 0.2
   activeTime: 0
+  attackRange: 0.33
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 256

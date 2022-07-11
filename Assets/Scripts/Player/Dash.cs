@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "PlayerSkill", menuName = "PlayerSkill/Dash", order = 2)]
 public class Dash : Skill
 {
     public float dashSpeed;
