@@ -14,6 +14,8 @@ public class HealthBarBehaviour : MonoBehaviour
     private string floatingTextPrefabLocation = "Prefabs/FloatingText";
     private string playerHealbarPrefabLocation = "Prefabs/PlayerHealthBarCanvas";
 
+    public float CurrHealth { get => currHealth; set => currHealth = value; }
+
     void Awake()
     {
         GameObject healthBarCanvas;
@@ -32,7 +34,7 @@ public class HealthBarBehaviour : MonoBehaviour
         floatingTextPrefab = (GameObject)Resources.Load(floatingTextPrefabLocation, typeof(GameObject));
         healthBarCanvas.transform.parent = transform;
         slider = healthBarCanvas.GetComponentInChildren<Slider>();
-        currHealth = maxHealth;
+        CurrHealth = maxHealth;
         slider.maxValue = maxHealth;
         slider.value = maxHealth;
     }
@@ -44,19 +46,19 @@ public class HealthBarBehaviour : MonoBehaviour
             damage = Mathf.Ceil(damage * DataManager.Instance.gameData.playerCritDamage);
         }
 
-        currHealth -= damage;
+        CurrHealth -= damage;
         ShowDamage(damage, isCrit);
-        SetHealth(currHealth);
-        if (currHealth <= 0)
+        SetHealth(CurrHealth);
+        if (CurrHealth <= 0)
         {
             if (gameObject.CompareTag("Player"))
             {
                 GetComponent<BuffController>().Respawn();
             }
-            else
-            {
-                Destroy(gameObject);
-            }
+            //else // T nghi la nen de cac object tu Destroy de goi ra animation death
+            //{
+            //    Destroy(gameObject);
+            //}
 
         }
     }
@@ -77,10 +79,10 @@ public class HealthBarBehaviour : MonoBehaviour
 
     public bool BuffHP(float buffHP)
     {
-        if (currHealth >= maxHealth) return false;
-        currHealth += buffHP;
-        if (currHealth >= maxHealth) currHealth = maxHealth;
-        SetHealth(currHealth);
+        if (CurrHealth >= maxHealth) return false;
+        CurrHealth += buffHP;
+        if (CurrHealth >= maxHealth) CurrHealth = maxHealth;
+        SetHealth(CurrHealth);
         return true;
     }
 
@@ -93,7 +95,7 @@ public class HealthBarBehaviour : MonoBehaviour
     public void ResetMaxHealth()
     {
         SetHealth(maxHealth);
-        currHealth = maxHealth;
+        CurrHealth = maxHealth;
     }
 
     // Update is called once per frame

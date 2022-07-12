@@ -24,9 +24,8 @@ public class FireballMoving : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate<GameObject>(prefapExposion, transform.position, Quaternion.identity);
-            
-            // TODO: Player Take Damage
-            Debug.Log($"{collision.tag} Take Damge by {transform.tag}");
+
+            collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(15, false);
         }
     }
 }
