@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Common;
 using UnityEngine;
 
 public class GoblinBehaviour : MonoBehaviour
@@ -7,11 +8,22 @@ public class GoblinBehaviour : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator animationController;
 
+    public Vector3 attackOffset;
+    public float attackRange = 1f;
+    public LayerMask attackMask;
+
     private float moveSpeed = 1f;
     private bool facingRight = true;
     private Vector2 originalPosition;
     [SerializeField]
     private float movingDistance;
+    private float health;
+
+    private void Awake()
+    {
+        health = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
+        //gameObject.GetComponent<HealthBarBehaviour>().CurrHealth = health;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +35,31 @@ public class GoblinBehaviour : MonoBehaviour
         Vector2 direction = new Vector2(1, 0);
         rb2d.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
         StartCoroutine(Moving());
+
     }
 
-    IEnumerator Moving()
+    public void Attack()
+    {
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        if (colInfo != null)
+        {
+            GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(8, false);
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+
+        Gizmos.DrawWireSphere(pos, attackRange);
+    }
+
+IEnumerator Moving()
     {
         while (true)
         {
@@ -50,8 +84,32 @@ public class GoblinBehaviour : MonoBehaviour
     void Update()
     {
         animationController.SetBool("moving", rb2d.velocity.sqrMagnitude >= 0.2);
-    }
+        float currentHealth = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
+        if (currentHealth < health)
+        {
+            animationController.SetTrigger(Constants.GoblinTriggerTakeHit);
+            health = currentHealth;
+        }
+        if(currentHealth < 0)
+        {
+            animationController.SetTrigger(Constants.GoblinTriggerDie);
+        }
 
+        // detact player
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        if (colInfo != null)
+        {
+            rb2d.velocity = Vector2.zero;
+            animationController.SetTrigger(Constants.GoblinTriggerAttack);
+        }
+    }
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
     void Flip()
     {
         // Switch the way the player is labelled as facing
