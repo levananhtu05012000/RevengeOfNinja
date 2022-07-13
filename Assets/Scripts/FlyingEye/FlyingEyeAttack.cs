@@ -37,7 +37,7 @@ public class FlyingEyeAttack : MonoBehaviour
         while (true)
         {
             yield return new WaitUntil(() => hasDetectPlayer);
-            GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(10, false);
+            GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(Constants.FlyingEyeDmg, false);
             yield return new WaitForSeconds(1);
         }
     }
