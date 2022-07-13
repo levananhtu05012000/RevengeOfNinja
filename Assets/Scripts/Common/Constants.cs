@@ -21,5 +21,9 @@ namespace Assets.Scripts.Common
         public const string SkeletonTriggerTakeHit = "TakeHit";
         public const string SkeletonTriggerAttack = "Attack";
         public const string SkeletonTriggerDeath = "Death";
+
+        // FlyingEye's triggers
+        public const string FlyingEyeTriggerTakeHit = "TakeHit";
+        public const string FlyingEyeTriggerDeath = "Death";
     }
 }

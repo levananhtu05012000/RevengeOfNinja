@@ -17,7 +17,7 @@ public class GoblinAttack : MonoBehaviour
         if (collision.CompareTag(Constants.TagPlayer))
         {
             rb2d.velocity = Vector2.zero;
-            anim.SetTrigger("Attack");
+            anim.SetTrigger(Constants.GoblinTriggerAttack);
         }
     }
 
