@@ -12,8 +12,14 @@ namespace Assets.Scripts.Common
         public const string TagCreep = "Creep";
         public const string TagShuriken = "Shuriken";
 
+        // Goblin's triggers
         public const string GoblinTriggerTakeHit = "TakeHit";
         public const string GoblinTriggerAttack = "Attack";
         public const string GoblinTriggerDie = "Die";
+
+        // Skeleton's triggers
+        public const string SkeletonTriggerTakeHit = "TakeHit";
+        public const string SkeletonTriggerAttack = "Attack";
+        public const string SkeletonTriggerDeath = "Death";
     }
 }
