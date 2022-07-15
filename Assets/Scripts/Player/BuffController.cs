@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BuffController : MonoBehaviour
 {
@@ -18,6 +20,8 @@ public class BuffController : MonoBehaviour
     private int currExp = 0;
 
     private GameObject currentCheckpoint;
+
+    private GameObject endGameUI;
 
     private void Awake()
     {
@@ -86,6 +90,7 @@ public class BuffController : MonoBehaviour
         {
             // END GAME
             Debug.Log("End Game");
+            DisplayEndGameUI("Game Over", 0);
         }
     }
 
@@ -98,5 +103,28 @@ public class BuffController : MonoBehaviour
             return true;
         }
         else return false;
+    }
+
+    public void FinishGame()
+    {
+        PlayerPrefs.SetInt("expValue", PlayerPrefs.GetInt("expValue") + currExp);
+        DisplayEndGameUI("Complete Level", currExp);
+    }
+
+    public void DisplayEndGameUI(string message, int expCount)
+    {
+        GameObject endGameUICanvas = Instantiate((GameObject)Resources.Load("Prefabs/EndGameUI", typeof(GameObject)));
+        endGameUICanvas.transform.Find("Background").Find("Message").GetComponent<TextMeshProUGUI>().text = message;
+        endGameUICanvas.transform.Find("Background").Find("CountEXP").GetComponent<TextMeshProUGUI>().text = expCount.ToString();
+        endGameUICanvas.transform.Find("Background").Find("ButtonReplay").GetComponent<Button>()
+            .onClick.AddListener(() =>
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            });
+        endGameUICanvas.transform.Find("Background").Find("ButtonSelectLevel").GetComponent<Button>()
+             .onClick.AddListener(() =>
+             {
+                 SceneManager.LoadScene("ChooseLevel");
+             });
     }
 }
