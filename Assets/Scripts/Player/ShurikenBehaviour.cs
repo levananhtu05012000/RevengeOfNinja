@@ -17,7 +17,7 @@ public class ShurikenBehaviour : MonoBehaviour
 
     public void CheckCrit()
     {
-        float critRate = DataManager.Instance.gameData.playerCritRate;
+        float critRate = PlayerPrefs.GetFloat("critRateValue");
         if (Random.Range(0, 100) <= critRate)
         {
             isCrit = true;
@@ -55,7 +55,7 @@ public class ShurikenBehaviour : MonoBehaviour
         Destroy(gameObject);
         if (collision.gameObject.CompareTag(Constants.TagCreep))
         {
-            collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(DataManager.Instance.gameData.playerDamage, isCrit);
+            collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(PlayerPrefs.GetFloat("attackDamageValue"), isCrit);
         }
         if (collision.gameObject.CompareTag("Boss"))
         {

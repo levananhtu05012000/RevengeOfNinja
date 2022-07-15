@@ -22,7 +22,7 @@ public class HealthBarBehaviour : MonoBehaviour
         if (gameObject.CompareTag("Player"))
         {
             healthBarCanvas = Instantiate((GameObject)Resources.Load(playerHealbarPrefabLocation, typeof(GameObject)));
-            maxHealth = DataManager.Instance.gameData.playerMaxHealth;
+            maxHealth = PlayerPrefs.GetFloat("maxHealthValue");
 
         }
         else
@@ -43,7 +43,7 @@ public class HealthBarBehaviour : MonoBehaviour
     {
         if (isCrit)
         {
-            damage = Mathf.Ceil(damage * DataManager.Instance.gameData.playerCritDamage);
+            damage = Mathf.Ceil(damage * PlayerPrefs.GetFloat("critDamageValue"));
         }
 
         CurrHealth -= damage;
