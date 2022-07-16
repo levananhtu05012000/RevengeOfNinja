@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthBarBehaviour : MonoBehaviour
 {
@@ -18,10 +19,29 @@ public class HealthBarBehaviour : MonoBehaviour
     {
         anim = GameObject.FindGameObjectWithTag("Boss").GetComponent<Animator>();
         GameObject healthBarCanvas = Instantiate((GameObject)Resources.Load(healbarPrefabLocation, typeof(GameObject)));
+    private string playerHealbarPrefabLocation = "Prefabs/PlayerHealthBarCanvas";
+
+    public float CurrHealth { get => currHealth; set => currHealth = value; }
+
+    void Awake()
+    {
+        GameObject healthBarCanvas;
+        if (gameObject.CompareTag("Player"))
+        {
+            healthBarCanvas = Instantiate((GameObject)Resources.Load(playerHealbarPrefabLocation, typeof(GameObject)));
+            maxHealth = PlayerPrefs.GetFloat("maxHealthValue");
+
+        }
+        else
+        {
+            healthBarCanvas = Instantiate((GameObject)Resources.Load(healbarPrefabLocation, typeof(GameObject)));
+        }
+
+
         floatingTextPrefab = (GameObject)Resources.Load(floatingTextPrefabLocation, typeof(GameObject));
         healthBarCanvas.transform.parent = transform;
         slider = healthBarCanvas.GetComponentInChildren<Slider>();
-        currHealth = maxHealth;
+        CurrHealth = maxHealth;
         slider.maxValue = maxHealth;
         slider.value = maxHealth;
     }
@@ -52,6 +72,25 @@ public class HealthBarBehaviour : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        if (isCrit)
+        {
+            damage = Mathf.Ceil(damage * PlayerPrefs.GetFloat("critDamageValue"));
+        }
+
+        CurrHealth -= damage;
+        ShowDamage(damage, isCrit);
+        SetHealth(CurrHealth);
+        if (CurrHealth <= 0)
+        {
+            if (gameObject.CompareTag("Player"))
+            {
+                GetComponent<BuffController>().Respawn();
+            }
+            //else // T nghi la nen de cac object tu Destroy de goi ra animation death
+            //{
+            //    Destroy(gameObject);
+            //}
+
         }
     }
 
@@ -61,18 +100,33 @@ public class HealthBarBehaviour : MonoBehaviour
 
         GameObject floatDamage = Instantiate(floatingTextPrefab, transform.position + offset, Quaternion.identity);
 
-        floatDamage.GetComponentInChildren<TextMesh>().text = damage.ToString();
+        floatDamage.GetComponentInChildren<TextMeshPro>().text = damage.ToString();
         if (isCrit)
         {
-            floatDamage.GetComponentInChildren<TextMesh>().color = Color.red;
+            floatDamage.GetComponentInChildren<TextMeshPro>().color = Color.red;
         }
         Destroy(floatDamage, 1f);
+    }
+
+    public bool BuffHP(float buffHP)
+    {
+        if (CurrHealth >= maxHealth) return false;
+        CurrHealth += buffHP;
+        if (CurrHealth >= maxHealth) CurrHealth = maxHealth;
+        SetHealth(CurrHealth);
+        return true;
     }
 
 
     public void SetHealth(float HP)
     {
         slider.value = HP;
+    }
+
+    public void ResetMaxHealth()
+    {
+        SetHealth(maxHealth);
+        CurrHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -83,6 +137,9 @@ public class HealthBarBehaviour : MonoBehaviour
 
     void LateUpdate()
     {
-        slider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0f, 0.5f, 0f));
+        if (!gameObject.CompareTag("Player"))
+        {
+            slider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0f, 0.5f, 0f));
+        }
     }
 }

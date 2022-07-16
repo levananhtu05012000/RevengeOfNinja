@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "PlayerSkill", menuName = "PlayerSkill/ThrowShuriken", order = 3)]
 public class ThrowShuriken : Skill
 {
     public float shurikenSpeed;
@@ -15,9 +15,12 @@ public class ThrowShuriken : Skill
         PlayerMovement movement = parent.GetComponent<PlayerMovement>();
         Rigidbody2D rigidbody = parent.GetComponent<Rigidbody2D>();
 
-        GameObject newShuriken = Instantiate(shurikenPrefab, parent.transform.position, Quaternion.identity);
-        newShuriken.GetComponent<Rigidbody2D>().velocity = new Vector2(parent.transform.localScale.x * shurikenSpeed, 0f);
-        newShuriken.GetComponent<ShurikenBehaviour>().CheckCrit(50f);
+        if (parent.GetComponent<BuffController>().UseShuriken())
+        {
+            GameObject newShuriken = Instantiate(shurikenPrefab, parent.transform.position, Quaternion.identity);
+            newShuriken.GetComponent<Rigidbody2D>().velocity = new Vector2(parent.transform.localScale.x * shurikenSpeed, 0f);
+        }
+
 
     }
     public override void BeginCooldown(GameObject parent)

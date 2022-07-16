@@ -7,17 +7,17 @@ public class ShurikenBehaviour : MonoBehaviour
 {
     private bool isCrit = false;
     private SpriteRenderer sr;
-    private Animator anim;
 
     // Start is called before the first frame update
     void Awake()
     {
-        anim = GameObject.FindGameObjectWithTag("Boss").GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        CheckCrit();
     }
 
-    public void CheckCrit(float critRate)
+    public void CheckCrit()
     {
+        float critRate = PlayerPrefs.GetFloat("critRateValue");
         if (Random.Range(0, 100) <= critRate)
         {
             isCrit = true;
@@ -36,16 +36,31 @@ public class ShurikenBehaviour : MonoBehaviour
 
     }
 
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    Destroy(gameObject);
+    //    if (collision.gameObject.CompareTag(Constants.TagCreep))
+    //    {
+    //        collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(20, isCrit);
+    //    }
+    //    if (collision.gameObject.CompareTag("Boss"))
+    //    {
+    //        collision.gameObject.GetComponent<Boss_HealthBar>().TakeDamage(20, isCrit);
+    //        anim.SetTrigger("Takehit");
+    //    }
+    //}
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
         if (collision.gameObject.CompareTag(Constants.TagCreep))
         {
-            collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(20, isCrit);
+            collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(PlayerPrefs.GetFloat("attackDamageValue"), isCrit);
         }
         if (collision.gameObject.CompareTag(Constants.TagBoss))
         {
             collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(20, isCrit);
+            Animator anim = GameObject.FindGameObjectWithTag("Boss").GetComponent<Animator>();
             anim.SetTrigger("Takehit");
         }
     }

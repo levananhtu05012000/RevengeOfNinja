@@ -9,8 +9,7 @@ public class ExposionTrigger : MonoBehaviour
     {
         if (collision.tag.Equals(Constants.TagPlayer))
         {
-            // TODO: Player Take Damage
-            Debug.Log($"{collision.tag} Take Damge by {transform.tag}");
+            GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(Constants.MushroomDmg, false);
         }
     }
 }
