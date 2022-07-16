@@ -21,5 +21,8 @@ public class GameData
 
     public int numberShuriken = 10;
     public int numberLife = 3;
-    //public float bossHealth = 100f;
+
+
+    public float bossMaxHealth = 200f;
+    public float bossDamageNormal = 18f;
 }
