@@ -57,9 +57,9 @@ public class ShurikenBehaviour : MonoBehaviour
         {
             collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(PlayerPrefs.GetFloat("attackDamageValue"), isCrit);
         }
-        if (collision.gameObject.CompareTag("Boss"))
+        if (collision.gameObject.CompareTag(Constants.TagBoss))
         {
-            collision.gameObject.GetComponent<Boss_HealthBar>().TakeDamage(20, isCrit);
+            collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(20, isCrit);
             Animator anim = GameObject.FindGameObjectWithTag("Boss").GetComponent<Animator>();
             anim.SetTrigger("Takehit");
         }

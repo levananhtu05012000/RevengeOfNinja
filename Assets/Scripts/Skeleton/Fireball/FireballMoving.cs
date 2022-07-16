@@ -34,4 +34,6 @@ public class FireballMoving : MonoBehaviour
             collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(15, false);
         }
     }
+
+
 }

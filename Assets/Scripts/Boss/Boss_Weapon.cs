@@ -23,10 +23,38 @@ public class Boss_Weapon : MonoBehaviour
 		{
 			//colInfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
 			Debug.Log("Hit player");
+        }
+    }
+
+    public void EnragedAttack()
+    {
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+
+        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        if (colInfo != null)
+        {
+            Debug.Log("Hit player with enrage!");
+            //colInfo.GetComponent<PlayerHealth>().TakeDamage(enragedAttackDamage);
+        }
+    }
+
+	public void JumpAttack()
+    {
+		Vector3 pos = transform.position;
+		pos += transform.right * attackOffset.x;
+		pos += transform.up * attackOffset.y;
+
+		Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+		if (colInfo != null)
+		{
+			Debug.Log("Hit player jump attack!");
+			//colInfo.GetComponent<PlayerHealth>().TakeDamage(enragedAttackDamage);
 		}
 	}
 
-	public void EnragedAttack()
+	public void Skill1()
 	{
 		Vector3 pos = transform.position;
 		pos += transform.right * attackOffset.x;
@@ -35,10 +63,11 @@ public class Boss_Weapon : MonoBehaviour
 		Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
 		if (colInfo != null)
 		{
-			Debug.Log(1);
+			Debug.Log("Skill 1");
 			//colInfo.GetComponent<PlayerHealth>().TakeDamage(enragedAttackDamage);
 		}
 	}
+
 
 	void OnDrawGizmosSelected()
 	{
@@ -48,4 +77,8 @@ public class Boss_Weapon : MonoBehaviour
 
 		Gizmos.DrawWireSphere(pos, attackRange);
 	}
+
+   
+
+
 }

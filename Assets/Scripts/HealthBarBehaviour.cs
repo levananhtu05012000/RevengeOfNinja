@@ -6,12 +6,19 @@ using TMPro;
 
 public class HealthBarBehaviour : MonoBehaviour
 {
-    public float maxHealth = 50;
+    public float maxHealth = 200;
     private Slider slider;
     private float currHealth;
     private GameObject floatingTextPrefab;
-    private string healbarPrefabLocation = "Prefabs/Healthbar";
+    private Animator anim;
+    private string healbarPrefabLocation = "Prefabs/Healthbar_Boss";
     private string floatingTextPrefabLocation = "Prefabs/FloatingText";
+    public bool isVulnerable = false;
+
+    void Awake()
+    {
+        anim = GameObject.FindGameObjectWithTag("Boss").GetComponent<Animator>();
+        GameObject healthBarCanvas = Instantiate((GameObject)Resources.Load(healbarPrefabLocation, typeof(GameObject)));
     private string playerHealbarPrefabLocation = "Prefabs/PlayerHealthBarCanvas";
 
     public float CurrHealth { get => currHealth; set => currHealth = value; }
@@ -41,6 +48,30 @@ public class HealthBarBehaviour : MonoBehaviour
 
     public void TakeDamage(float damage, bool isCrit)
     {
+        if (isVulnerable)
+            return;
+
+        currHealth -= damage;
+        ShowDamage(damage, isCrit);
+        SetHealth(currHealth);
+
+        if (currHealth <= 100)
+        {
+            if (gameObject.CompareTag("Boss"))
+            { 
+                anim.SetTrigger("isEnrange");
+            }
+        }
+        if (currHealth <= 0)
+        {
+            if (gameObject.CompareTag("Boss"))
+            {
+                anim.SetTrigger("Death");
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         if (isCrit)
         {
             damage = Mathf.Ceil(damage * PlayerPrefs.GetFloat("critDamageValue"));
