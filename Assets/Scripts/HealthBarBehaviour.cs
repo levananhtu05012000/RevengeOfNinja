@@ -11,15 +11,12 @@ public class HealthBarBehaviour : MonoBehaviour
     private float currHealth;
     private GameObject floatingTextPrefab;
     private Animator anim;
-    private string healbarPrefabLocation = "Prefabs/Healthbar_Boss";
+    private string bossHealbarPrefabLocation = "Prefabs/Healthbar_Boss";
+    private string healbarPrefabLocation = "Prefabs/Healthbar";
     private string floatingTextPrefabLocation = "Prefabs/FloatingText";
     public bool isVulnerable = false;
-
-    void Awake()
-    {
-        anim = GameObject.FindGameObjectWithTag("Boss").GetComponent<Animator>();
-        GameObject healthBarCanvas = Instantiate((GameObject)Resources.Load(healbarPrefabLocation, typeof(GameObject)));
     private string playerHealbarPrefabLocation = "Prefabs/PlayerHealthBarCanvas";
+
 
     public float CurrHealth { get => currHealth; set => currHealth = value; }
 
@@ -31,6 +28,11 @@ public class HealthBarBehaviour : MonoBehaviour
             healthBarCanvas = Instantiate((GameObject)Resources.Load(playerHealbarPrefabLocation, typeof(GameObject)));
             maxHealth = PlayerPrefs.GetFloat("maxHealthValue");
 
+        }
+        else if (gameObject.CompareTag("Boss"))
+        {
+            healthBarCanvas = Instantiate((GameObject)Resources.Load(bossHealbarPrefabLocation, typeof(GameObject)));
+            maxHealth = DataManager.Instance.gameData.bossMaxHealth;
         }
         else
         {
@@ -51,27 +53,6 @@ public class HealthBarBehaviour : MonoBehaviour
         if (isVulnerable)
             return;
 
-        currHealth -= damage;
-        ShowDamage(damage, isCrit);
-        SetHealth(currHealth);
-
-        if (currHealth <= 100)
-        {
-            if (gameObject.CompareTag("Boss"))
-            { 
-                anim.SetTrigger("isEnrange");
-            }
-        }
-        if (currHealth <= 0)
-        {
-            if (gameObject.CompareTag("Boss"))
-            {
-                anim.SetTrigger("Death");
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
         if (isCrit)
         {
             damage = Mathf.Ceil(damage * PlayerPrefs.GetFloat("critDamageValue"));
@@ -137,7 +118,7 @@ public class HealthBarBehaviour : MonoBehaviour
 
     void LateUpdate()
     {
-        if (!gameObject.CompareTag("Player"))
+        if (!gameObject.CompareTag("Player") && !gameObject.CompareTag("Boss"))
         {
             slider.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0f, 0.5f, 0f));
         }
