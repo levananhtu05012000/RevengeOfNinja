@@ -29,4 +29,6 @@ public class FireballMoving : MonoBehaviour
             Debug.Log($"{collision.tag} Take Damge by {transform.tag}");
         }
     }
+
+
 }

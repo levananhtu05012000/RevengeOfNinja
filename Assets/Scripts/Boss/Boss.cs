@@ -5,9 +5,8 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
 	public Transform player;
-
 	public bool isFlipped = false;
-	public void LookAtPlayer()
+    public void LookAtPlayer()
 	{
 
 		Vector3 flipped = transform.localScale;
@@ -27,7 +26,7 @@ public class Boss : MonoBehaviour
 		}
 	}
 
-	public void OnDeathAnimationFinished() 
+    public void OnDeathAnimationFinished() 
 	{
 		Destroy(gameObject);
 	}
