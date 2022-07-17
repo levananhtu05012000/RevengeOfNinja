@@ -102,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpCount--;
+            AudioManager.Play(AudioClipName.Jump);
         }
     }
 
