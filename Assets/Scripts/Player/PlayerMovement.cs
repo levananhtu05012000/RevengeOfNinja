@@ -143,6 +143,15 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
             GetComponent<BuffController>().CollectEXP();
         }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("FinishGame"))
+        {
+            GetComponent<BuffController>().FinishGame();
+        }
     }
 
     private void OnDrawGizmosSelected()

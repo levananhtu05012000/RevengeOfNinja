@@ -9,6 +9,7 @@ public class SkeletonAttack : MonoBehaviour
     [SerializeField]
     private GameObject prefabFireball;
     private bool hasDetectPlayer = false;
+    private Animator animationController;
 
     private void Awake()
     {
@@ -16,14 +17,8 @@ public class SkeletonAttack : MonoBehaviour
     }
     private void Start()
     {
+        animationController = gameObject.GetComponentInParent<Animator>();
         StartCoroutine(coroutinAttack);
-    }
-    private void Update()
-    {
-
-        GameObject player = GameObject.FindGameObjectWithTag(Constants.TagPlayer);
-        bool isRight = transform.position.x - player.transform.position.x >= 0;
-        Flip(isRight);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,16 +42,11 @@ public class SkeletonAttack : MonoBehaviour
         while (true)
         {
             yield return new WaitUntil(() => hasDetectPlayer);
+            animationController.SetTrigger(Constants.SkeletonTriggerAttack);
+            yield return new WaitUntil(() => animationController.GetCurrentAnimatorStateInfo(0).IsName(Constants.SkeletonTriggerAttack));
             Vector2 firePosition = transform.position;
             Instantiate<GameObject>(prefabFireball, firePosition, Quaternion.identity);
             yield return new WaitForSeconds(2);
         }
-    }
-    void Flip(bool isRight)
-    {
-        // Multiply the player's x local scale by -1
-        Vector3 theScale = transform.localScale;
-        theScale.x = isRight ? -1 : 1;
-        transform.localScale = theScale;
     }
 }

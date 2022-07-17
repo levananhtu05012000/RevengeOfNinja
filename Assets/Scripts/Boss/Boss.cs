@@ -4,31 +4,54 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-	public Transform player;
+    public Transform player;
+    public bool isFlipped = false;
+    private Animator anim;
+    private string checkpointEndGameLocation = "Prefabs/CheckpointEndGame";
 
-	public bool isFlipped = false;
-	public void LookAtPlayer()
-	{
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
-		Vector3 flipped = transform.localScale;
-		flipped.z *= -1f;
 
-		if (transform.position.x > player.position.x && isFlipped)
-		{
-			transform.localScale = flipped;
-			transform.Rotate(0f, 180f, 0f);
-			isFlipped = false;
-		}
-		else if (transform.position.x < player.position.x && !isFlipped)
-		{
-			transform.localScale = flipped;
-			transform.Rotate(0f, 180f, 0f);
-			isFlipped = true;
-		}
-	}
+    public void LookAtPlayer()
+    {
 
-	public void OnDeathAnimationFinished() 
-	{
-		Destroy(gameObject);
-	}
+        Vector3 flipped = transform.localScale;
+        flipped.z *= -1f;
+
+        if (transform.position.x > player.position.x && isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = false;
+        }
+        else if (transform.position.x < player.position.x && !isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = true;
+        }
+    }
+
+    private void Update()
+    {
+        float currentHealth = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
+        if (currentHealth < 100)
+        {
+            anim.SetTrigger("isEnrange");
+        }
+        if (currentHealth < 0)
+        {
+            anim.SetTrigger("Death");
+        }
+
+    }
+
+    public void OnDeathAnimationFinished()
+    {
+        Destroy(gameObject);
+        Instantiate((GameObject)Resources.Load(checkpointEndGameLocation, typeof(GameObject)), transform.position, Quaternion.identity);
+    }
 }

@@ -19,7 +19,7 @@ public class AttackSword : Skill
 
         anim.SetTrigger("attack");
 
-        float critRate = DataManager.Instance.gameData.playerCritRate;
+        float critRate = PlayerPrefs.GetFloat("critRateValue");
         bool isCrit = Random.Range(0, 100) <= critRate;
         if (isCrit)
             anim.SetFloat("attackState", 2);
@@ -34,7 +34,7 @@ public class AttackSword : Skill
         {
             Debug.Log(enemy.name);
 
-            float swordDamage = DataManager.Instance.gameData.playerDamage;
+            float swordDamage = PlayerPrefs.GetFloat("attackDamageValue");
 
             enemy.GetComponent<HealthBarBehaviour>().TakeDamage(swordDamage, isCrit);
         }

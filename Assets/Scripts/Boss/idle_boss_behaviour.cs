@@ -11,9 +11,6 @@ public class idle_boss_behaviour : StateMachineBehaviour
     {
         boss = animator.GetComponent<Boss>();
         rand = Random.Range(0, 4);
-
-        Debug.Log(rand);
-        boss.LookAtPlayer();
         if (rand == 0) 
         {
             animator.SetTrigger("Jump");
@@ -30,17 +27,17 @@ public class idle_boss_behaviour : StateMachineBehaviour
         {
             animator.SetTrigger("Skill 2");
         }
-        animator.ResetTrigger("Idle");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        boss.LookAtPlayer();
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //
+        animator.ResetTrigger("Idle");
     }
 }

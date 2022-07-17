@@ -17,16 +17,23 @@ public class FireballMoving : MonoBehaviour
         Rigidbody2D rb2d = GetComponent<Rigidbody2D>();
         rb2d.AddForce(direction * magnitude, ForceMode2D.Impulse);
     }
-
+    private void Update()
+    {
+        if (!GetComponent<Renderer>().isVisible)
+        {
+            Destroy(gameObject);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(Constants.TagPlayer))
         {
             Destroy(gameObject);
             Instantiate<GameObject>(prefapExposion, transform.position, Quaternion.identity);
-            
-            // TODO: Player Take Damage
-            Debug.Log($"{collision.tag} Take Damge by {transform.tag}");
+
+            collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(15, false);
         }
     }
+
+
 }
