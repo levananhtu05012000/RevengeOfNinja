@@ -24,8 +24,10 @@ public class DataManager : MonoBehaviour
         SetPaths();
 
 
-        SaveData(new GameData());
-        gameData = LoadData();
+        //SaveData(new GameData());
+        //gameData = LoadData();
+
+        gameData = new GameData();
     }
 
     // Start is called before the first frame update

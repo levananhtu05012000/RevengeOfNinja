@@ -38,11 +38,11 @@ public class Boss : MonoBehaviour
     private void Update()
     {
         float currentHealth = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
-        if (currentHealth < 100)
+        if (currentHealth <= DataManager.Instance.gameData.bossEnrangeHealth)
         {
             anim.SetTrigger("isEnrange");
         }
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             anim.SetTrigger("Death");
         }
