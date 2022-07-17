@@ -35,7 +35,12 @@ namespace Assets.Scripts.Common
         public const int MushroomDmg = 30;
         public const int TrapDmg = 8;
 
-        public const int BossDmg = 20;
-        public const int BossPhase2Dmg = 30;
+        //Boss Damage
+        public const int BossDmgAttack = 20;
+        public const int BossEnrageAttack = 30;
+        public const int BossJumpAttack = 30;
+        public const int BossFireBlastingAttack = 30;
+        public const int BossFireBallsAttack = 30;
+
     }
 }

@@ -5,8 +5,10 @@ using UnityEngine;
 public class Boss_Weapon : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float attackDamage = 20;
-    public int enragedAttackDamage = 40;
+    private float bossDamageNormal;
+    private float BossDamageEnrage;
+    private float BossJumpAttack;
+    private float BossFireBlastingAttack;
 
     public Vector3 attackOffset;
     public float attackRange = 1f;
@@ -21,9 +23,8 @@ public class Boss_Weapon : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            attackDamage = DataManager.Instance.gameData.bossDamageNormal;
-            colInfo.GetComponent<HealthBarBehaviour>().TakeDamage(attackDamage, false);
-            Debug.Log("Hit player");
+            bossDamageNormal = DataManager.Instance.gameData.bossDamageNormal;
+            colInfo.GetComponent<HealthBarBehaviour>().TakeDamage(bossDamageNormal, false);
         }
     }
 
@@ -36,8 +37,8 @@ public class Boss_Weapon : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            Debug.Log("Hit player with enrage!");
-            //colInfo.GetComponent<PlayerHealth>().TakeDamage(enragedAttackDamage);
+            BossDamageEnrage = DataManager.Instance.gameData.BossDamageEnrage;
+            colInfo.GetComponent<HealthBarBehaviour>().TakeDamage(BossDamageEnrage, false);
         }
     }
 
@@ -50,8 +51,8 @@ public class Boss_Weapon : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            Debug.Log("Hit player jump attack!");
-            //colInfo.GetComponent<PlayerHealth>().TakeDamage(enragedAttackDamage);
+            BossJumpAttack = DataManager.Instance.gameData.BossJumpAttack;
+            colInfo.GetComponent<HealthBarBehaviour>().TakeDamage(BossJumpAttack, false);
         }
     }
 
@@ -64,8 +65,9 @@ public class Boss_Weapon : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            Debug.Log("Skill 1");
-            //colInfo.GetComponent<PlayerHealth>().TakeDamage(enragedAttackDamage);
+            BossFireBlastingAttack = DataManager.Instance.gameData.BossFireBlastingAttack;
+            colInfo.GetComponent<HealthBarBehaviour>().TakeDamage(BossFireBlastingAttack, false);
+
         }
     }
 

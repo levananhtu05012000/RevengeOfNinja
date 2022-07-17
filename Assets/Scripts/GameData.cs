@@ -23,6 +23,10 @@ public class GameData
     public int numberLife = 3;
 
 
-    public float bossMaxHealth = 200f;
+    public float bossMaxHealth = 100f;
     public float bossDamageNormal = 18f;
+    public float BossDamageEnrage = 30f;
+    public float BossJumpAttack = 30f;
+    public float BossFireBlastingAttack = 30f;
+    public float BossFireBallsAttack = 30f;
 }
