@@ -23,13 +23,12 @@ public class Boss_run_enrange : StateMachineBehaviour
 		rb = animator.GetComponent<Rigidbody2D>();
 		boss = animator.GetComponent<Boss>();
 		target = new Vector2(player.position.x, rb.position.y);
-		boss.LookAtPlayer();
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
-		//boss.LookAtPlayer();
+		boss.LookAtPlayer();
 
 		//Vector2 target = new Vector2(player.position.x, rb.position.y);
 		//Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);

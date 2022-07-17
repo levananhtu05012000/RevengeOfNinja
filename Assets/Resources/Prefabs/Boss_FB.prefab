@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 9028955314500386919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.36, y: 2.36, z: 2.36}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefapExposionBoss: {fileID: 4649415344602603069, guid: d120b53880312354ab716b904f2d366c, type: 3}
+  BossFireBallsAttack: 0
 --- !u!95 &5398516841059816054
 Animator:
   serializedVersion: 4
