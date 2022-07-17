@@ -23,11 +23,15 @@ public class BuffController : MonoBehaviour
 
     private GameObject endGameUI;
 
+    private Vector2 initPlayerPosition;
+
     private void Awake()
     {
         currShuriken = DataManager.Instance.gameData.numberShuriken;
         currLife = DataManager.Instance.gameData.numberLife;
         UpdateUICount();
+
+        initPlayerPosition = transform.position;
     }
 
     // Start is called before the first frame update
@@ -79,10 +83,27 @@ public class BuffController : MonoBehaviour
 
     public void Respawn()
     {
+        StartCoroutine(DeathDelay());
+
+    }
+
+    IEnumerator DeathDelay()
+    {
+        GetComponent<Animator>().SetBool("isDeath", true);
+        GetComponent<PlayerMovement>().enabled = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        yield return new WaitForSeconds(3);
         if (currLife > 0)
         {
             GetComponent<HealthBarBehaviour>().ResetMaxHealth();
-            transform.position = currentCheckpoint.transform.position;
+            if (currentCheckpoint != null)
+            {
+                transform.position = currentCheckpoint.transform.position;
+            }
+            else
+            {
+                transform.position = initPlayerPosition;
+            }
             currLife--;
             UpdateUICount();
         }
@@ -92,6 +113,8 @@ public class BuffController : MonoBehaviour
             Debug.Log("End Game");
             DisplayEndGameUI("Game Over", 0);
         }
+        GetComponent<Animator>().SetBool("isDeath", false);
+        GetComponent<PlayerMovement>().enabled = true;
     }
 
     public bool UseShuriken()

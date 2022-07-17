@@ -27,6 +27,7 @@ public class SkillHolder : MonoBehaviour
             case SkillState.ready:
                 if (Input.GetKeyDown(key))
                 {
+                    if (gameObject.GetComponent<HealthBarBehaviour>().CurrHealth <= 0) break;
                     skill.Activate(gameObject);
                     state = SkillState.active;
                     _activeTime = skill.activeTime;
@@ -61,6 +62,7 @@ public class SkillHolder : MonoBehaviour
     {
         if (state == SkillState.ready)
         {
+            if (gameObject.GetComponent<HealthBarBehaviour>().CurrHealth <= 0) return;
             skill.Activate(gameObject);
             state = SkillState.active;
             _activeTime = skill.activeTime;
