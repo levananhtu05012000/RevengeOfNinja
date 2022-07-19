@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThanhVCScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PlayScene.unity
+    guid: 0f244c637ea477a4989fb9e33ec06299
   m_configObjects: {}

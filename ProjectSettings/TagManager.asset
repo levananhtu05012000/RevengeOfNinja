@@ -15,6 +15,7 @@ TagManager:
   - BuffShuriken
   - BuffEXP
   - FinishGame
+  - Audio
   layers:
   - Default
   - TransparentFX

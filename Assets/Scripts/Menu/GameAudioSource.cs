@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class GameAudioSource : MonoBehaviour
 {
-    private void Awake()
+    void Awake()
     {
+        AudioSource audioSource;
         if (!AudioManager.Initialized)
         {
-            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource = gameObject.AddComponent<AudioSource>();
             AudioManager.Initialize(audioSource);
             DontDestroyOnLoad(gameObject);
         }

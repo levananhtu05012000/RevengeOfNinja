@@ -9,5 +9,7 @@ public enum AudioClipName
     Dash,
     Jump,
     Slice,
-    Hit
+    Hit,
+    Up,
+    Down
 }
