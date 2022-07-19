@@ -15,6 +15,7 @@ TagManager:
   - BuffShuriken
   - BuffEXP
   - FinishGame
+  - Skeleton
   layers:
   - Default
   - TransparentFX

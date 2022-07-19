@@ -46,8 +46,8 @@ public class GoblinBehaviour : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(8, false);
-        }
+            GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(Constants.GoblinDmg, false);
+        } 
     }
 
     void OnDrawGizmosSelected()
@@ -83,10 +83,10 @@ IEnumerator Moving()
     // Update is called once per frame
     void Update()
     {
-        animationController.SetBool("moving", rb2d.velocity.sqrMagnitude >= 0.2);
         float currentHealth = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
         if (currentHealth < health)
         {
+            rb2d.velocity = Vector2.zero;
             animationController.SetTrigger(Constants.GoblinTriggerTakeHit);
             health = currentHealth;
         }
@@ -105,6 +105,7 @@ IEnumerator Moving()
             rb2d.velocity = Vector2.zero;
             animationController.SetTrigger(Constants.GoblinTriggerAttack);
         }
+        animationController.SetBool("moving", rb2d.velocity.sqrMagnitude >= 0.2);
     }
     public void Die()
     {

@@ -8,15 +8,22 @@ public class FlyingEyeBehaviour : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator animationController;
 
+    public Vector3 attackOffset;
+    public float attackRange = 1f;
+    public LayerMask attackMask;
+    private bool hasDetectPlayer = false;
+
     private float moveSpeed = 1f;
     private bool isFlyUp = true;
     private float health;
     private Vector2 originalPosition;
     [SerializeField]
     private float movingDistance;
+    private IEnumerator coroutinAttack;
     private void Awake()
     {
         health = gameObject.GetComponent<HealthBarBehaviour>().maxHealth;
+        coroutinAttack = Attack();
     }
     // Start is called before the first frame update
     void Start()
@@ -29,6 +36,7 @@ public class FlyingEyeBehaviour : MonoBehaviour
         Vector2 direction = new Vector2(0, 1);
         rb2d.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
         StartCoroutine(Moving());
+        StartCoroutine(coroutinAttack);
     }
     private void Update()
     {
@@ -36,6 +44,30 @@ public class FlyingEyeBehaviour : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag(Constants.TagPlayer);
         bool isRight = transform.position.x - player.transform.position.x >= 0;
         Flip(isRight);
+
+        // detact player
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        hasDetectPlayer = colInfo != null;
+    }
+    IEnumerator Attack()
+    {
+        while (true)
+        {
+            yield return new WaitUntil(() => hasDetectPlayer);
+            GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(Constants.FlyingEyeDmg, false);
+            yield return new WaitForSeconds(1);
+        }
+    }
+    void OnDrawGizmosSelected()
+    {
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+
+        Gizmos.DrawWireSphere(pos, attackRange);
     }
     IEnumerator Moving()
     {
@@ -61,6 +93,7 @@ public class FlyingEyeBehaviour : MonoBehaviour
 
         if (currentHealth < health)
         {
+            rb2d.velocity = Vector2.zero;
             animationController.SetTrigger(Constants.FlyingEyeTriggerTakeHit);
             health = currentHealth;
         }

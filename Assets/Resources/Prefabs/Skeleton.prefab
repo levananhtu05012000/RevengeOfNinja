@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2015869860}
   m_Layer: 8
   m_Name: Skeleton
-  m_TagString: Creep
+  m_TagString: Skeleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,8 +33,7 @@ Transform:
   m_LocalPosition: {x: -1.333, y: 0, z: -0.0006925521}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6339668943632503841}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -160,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
+  isVulnerable: 0
 --- !u!114 &2015869860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,75 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda9f68eb3e67d14a81f4e5bdd92c08a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &6492933024630711785
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6339668943632503841}
-  - component: {fileID: 3789260837530630321}
-  - component: {fileID: 5260669113240148018}
-  m_Layer: 9
-  m_Name: AttackRange
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6339668943632503841
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492933024630711785}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3631018829485774096}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &3789260837530630321
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492933024630711785}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.012491465, y: 0.82230884}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.8190188, y: 1.6581548}
-  m_EdgeRadius: 0
---- !u!114 &5260669113240148018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492933024630711785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adaf17a14401a504290cd8d5443fecf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   prefabFireball: {fileID: 2616054945892302452, guid: bbd66fbe94870014da239d7d88c8ceba, type: 3}
+  attackOffset: {x: 0, y: 0, z: 0}
+  attackRange: 2
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 512
