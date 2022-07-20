@@ -18,11 +18,15 @@ public class GoblinBehaviour : MonoBehaviour
     [SerializeField]
     private float movingDistance;
     private float health;
+    private bool hasDetectPlayer = false;
+    private bool isAttacking = false;
+    private IEnumerator coroutinAttack;
 
     private void Awake()
     {
         health = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
         //gameObject.GetComponent<HealthBarBehaviour>().CurrHealth = health;
+        coroutinAttack = TriggerAttack();
     }
     // Start is called before the first frame update
     void Start()
@@ -35,7 +39,7 @@ public class GoblinBehaviour : MonoBehaviour
         Vector2 direction = new Vector2(1, 0);
         rb2d.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
         StartCoroutine(Moving());
-
+        StartCoroutine(coroutinAttack);
     }
 
     public void Attack()
@@ -46,7 +50,16 @@ public class GoblinBehaviour : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(8, false);
+            GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(Constants.GoblinDmg, false);
+        }
+    }
+    IEnumerator TriggerAttack()
+    {
+        while (true)
+        {
+            yield return new WaitUntil(() => hasDetectPlayer);
+            animationController.SetTrigger(Constants.GoblinTriggerAttack);
+            yield return new WaitForSeconds(2);
         }
     }
 
@@ -83,10 +96,10 @@ IEnumerator Moving()
     // Update is called once per frame
     void Update()
     {
-        animationController.SetBool("moving", rb2d.velocity.sqrMagnitude >= 0.2);
         float currentHealth = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
         if (currentHealth < health)
         {
+            rb2d.velocity = Vector2.zero;
             animationController.SetTrigger(Constants.GoblinTriggerTakeHit);
             health = currentHealth;
         }
@@ -103,8 +116,12 @@ IEnumerator Moving()
         if (colInfo != null)
         {
             rb2d.velocity = Vector2.zero;
-            animationController.SetTrigger(Constants.GoblinTriggerAttack);
+            hasDetectPlayer = true;
+        } else
+        {
+            hasDetectPlayer = false;
         }
+        animationController.SetBool("moving", rb2d.velocity.sqrMagnitude >= 0.2);
     }
     public void Die()
     {

@@ -36,7 +36,7 @@ public class StatsController : MonoBehaviour
         UpdateUIData();
         LoadListener();
 
-        if (PlayerPrefs.HasKey("attackDamage")) SaveStats();
+        if (!PlayerPrefs.HasKey("attackDamage")) SaveStats();
     }
 
     void LoadInitData()
