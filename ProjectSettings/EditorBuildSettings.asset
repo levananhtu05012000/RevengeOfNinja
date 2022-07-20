@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayScene.unity
     guid: 0f244c637ea477a4989fb9e33ec06299
+  - enabled: 1
+    path: Assets/Scenes/MapBoss.unity
+    guid: 3556e19d391c81a47a9dde994ed092ae
   m_configObjects: {}
