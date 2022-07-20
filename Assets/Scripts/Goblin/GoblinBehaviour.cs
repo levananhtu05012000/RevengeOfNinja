@@ -18,11 +18,15 @@ public class GoblinBehaviour : MonoBehaviour
     [SerializeField]
     private float movingDistance;
     private float health;
+    private bool hasDetectPlayer = false;
+    private bool isAttacking = false;
+    private IEnumerator coroutinAttack;
 
     private void Awake()
     {
         health = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
         //gameObject.GetComponent<HealthBarBehaviour>().CurrHealth = health;
+        coroutinAttack = TriggerAttack();
     }
     // Start is called before the first frame update
     void Start()
@@ -35,7 +39,7 @@ public class GoblinBehaviour : MonoBehaviour
         Vector2 direction = new Vector2(1, 0);
         rb2d.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
         StartCoroutine(Moving());
-
+        StartCoroutine(coroutinAttack);
     }
 
     public void Attack()
@@ -47,7 +51,16 @@ public class GoblinBehaviour : MonoBehaviour
         if (colInfo != null)
         {
             GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(Constants.GoblinDmg, false);
-        } 
+        }
+    }
+    IEnumerator TriggerAttack()
+    {
+        while (true)
+        {
+            yield return new WaitUntil(() => hasDetectPlayer);
+            animationController.SetTrigger(Constants.GoblinTriggerAttack);
+            yield return new WaitForSeconds(2);
+        }
     }
 
     void OnDrawGizmosSelected()
@@ -103,7 +116,10 @@ IEnumerator Moving()
         if (colInfo != null)
         {
             rb2d.velocity = Vector2.zero;
-            animationController.SetTrigger(Constants.GoblinTriggerAttack);
+            hasDetectPlayer = true;
+        } else
+        {
+            hasDetectPlayer = false;
         }
         animationController.SetBool("moving", rb2d.velocity.sqrMagnitude >= 0.2);
     }
