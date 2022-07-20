@@ -90,6 +90,7 @@ public class BuffController : MonoBehaviour
     IEnumerator DeathDelay()
     {
         GetComponent<Animator>().SetBool("isDeath", true);
+        AudioManager.Play(AudioClipName.PlayerDie);
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         yield return new WaitForSeconds(3);

@@ -12,6 +12,7 @@ public class SkeletonBehaviour : MonoBehaviour
     [SerializeField]
     private GameObject prefabFireball;
     private bool hasDetectPlayer = false;
+    private bool isDead = false;
 
     public Vector3 attackOffset;
     public float attackRange = 1f;
@@ -52,11 +53,17 @@ public class SkeletonBehaviour : MonoBehaviour
         if (currentHealth < health)
         {
             animationController.SetTrigger(Constants.SkeletonTriggerTakeHit);
+            AudioManager.Play(AudioClipName.SkeletonTakehit);
             health = currentHealth;
         }
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             animationController.SetTrigger(Constants.SkeletonTriggerDeath);
+            if(isDead == false)
+            {
+                AudioManager.Play(AudioClipName.SkeletonDie);
+                isDead = true;
+            }
         }
     }
 

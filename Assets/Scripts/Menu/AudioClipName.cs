@@ -11,5 +11,17 @@ public enum AudioClipName
     Slice,
     Hit,
     Up,
-    Down
+    Down,
+    FleshTakehit,
+    SkeletonTakehit,
+    SkeletonDie,
+    Explosion,
+    GoblinAttack,
+    MushroomDetection,
+    TrapAttack,
+    PlayerAttack,
+    PlayerAttackCrit,
+    PlayerShuriken,
+    PlayerDie,
+    PlayerDash
 }

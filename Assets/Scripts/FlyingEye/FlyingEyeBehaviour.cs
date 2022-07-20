@@ -93,11 +93,11 @@ public class FlyingEyeBehaviour : MonoBehaviour
 
         if (currentHealth < health)
         {
-            rb2d.velocity = Vector2.zero;
             animationController.SetTrigger(Constants.FlyingEyeTriggerTakeHit);
+            AudioManager.Play(AudioClipName.FleshTakehit);
             health = currentHealth;
         }
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             rb2d.velocity = Vector2.zero;
             animationController.SetTrigger(Constants.FlyingEyeTriggerDeath);

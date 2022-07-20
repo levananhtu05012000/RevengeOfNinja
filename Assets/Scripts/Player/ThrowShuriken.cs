@@ -17,6 +17,7 @@ public class ThrowShuriken : Skill
 
         if (parent.GetComponent<BuffController>().UseShuriken())
         {
+            AudioManager.Play(AudioClipName.PlayerShuriken);
             GameObject newShuriken = Instantiate(shurikenPrefab, parent.transform.position, Quaternion.identity);
             newShuriken.GetComponent<Rigidbody2D>().velocity = new Vector2(parent.transform.localScale.x * shurikenSpeed, 0f);
         }

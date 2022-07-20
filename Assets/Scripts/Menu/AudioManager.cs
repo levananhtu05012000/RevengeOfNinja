@@ -24,7 +24,19 @@ public static class AudioManager
         audioClips.Add(AudioClipName.Hit, Resources.Load<AudioClip>("ButtonClick"));
         audioClips.Add(AudioClipName.Up, Resources.Load<AudioClip>("ButtonClick1"));
         audioClips.Add(AudioClipName.Down, Resources.Load<AudioClip>("ButtonClick1"));
-        
+        audioClips.Add(AudioClipName.FleshTakehit, Resources.Load<AudioClip>("flesh-takehit"));
+        audioClips.Add(AudioClipName.SkeletonTakehit, Resources.Load<AudioClip>("skeleton-takehit"));
+        audioClips.Add(AudioClipName.SkeletonDie, Resources.Load<AudioClip>("skeleton-die"));
+        audioClips.Add(AudioClipName.Explosion, Resources.Load<AudioClip>("Explosion"));
+        audioClips.Add(AudioClipName.GoblinAttack, Resources.Load<AudioClip>("goblin-attack"));
+        audioClips.Add(AudioClipName.MushroomDetection, Resources.Load<AudioClip>("mushroom-detection"));
+        audioClips.Add(AudioClipName.TrapAttack, Resources.Load<AudioClip>("trap-attack"));
+        audioClips.Add(AudioClipName.PlayerAttack, Resources.Load<AudioClip>("player-attack"));
+        audioClips.Add(AudioClipName.PlayerAttackCrit, Resources.Load<AudioClip>("player-attack-crit"));
+        audioClips.Add(AudioClipName.PlayerShuriken, Resources.Load<AudioClip>("player-shuriken"));
+        audioClips.Add(AudioClipName.PlayerDie, Resources.Load<AudioClip>("player-die"));
+        audioClips.Add(AudioClipName.PlayerDash, Resources.Load<AudioClip>("player-dash"));
+
         initialized = true;
     }
     

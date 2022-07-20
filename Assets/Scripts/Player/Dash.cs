@@ -9,6 +9,7 @@ public class Dash : Skill
 
     public override void Activate(GameObject parent)
     {
+        AudioManager.Play(AudioClipName.PlayerDash);
         PlayerMovement movement = parent.GetComponent<PlayerMovement>();
         Rigidbody2D rigidbody = parent.GetComponent<Rigidbody2D>();
         movement.isDashing = true;
