@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Common;
 using UnityEngine;
 
 public class GoblinBehaviour : MonoBehaviour
@@ -7,11 +8,26 @@ public class GoblinBehaviour : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator animationController;
 
+    public Vector3 attackOffset;
+    public float attackRange = 1f;
+    public LayerMask attackMask;
+
     private float moveSpeed = 1f;
     private bool facingRight = true;
     private Vector2 originalPosition;
     [SerializeField]
     private float movingDistance;
+    private float health;
+    private bool hasDetectPlayer = false;
+    private bool isAttacking = false;
+    private IEnumerator coroutinAttack;
+
+    private void Awake()
+    {
+        health = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
+        //gameObject.GetComponent<HealthBarBehaviour>().CurrHealth = health;
+        coroutinAttack = TriggerAttack();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +39,41 @@ public class GoblinBehaviour : MonoBehaviour
         Vector2 direction = new Vector2(1, 0);
         rb2d.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
         StartCoroutine(Moving());
+        StartCoroutine(coroutinAttack);
     }
 
-    IEnumerator Moving()
+    public void Attack()
+    {
+        AudioManager.Play(AudioClipName.GoblinAttack);
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        if (colInfo != null)
+        {
+            GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(Constants.GoblinDmg, false);
+        }
+    }
+    IEnumerator TriggerAttack()
+    {
+        while (true)
+        {
+            yield return new WaitUntil(() => hasDetectPlayer);
+            animationController.SetTrigger(Constants.GoblinTriggerAttack);
+            yield return new WaitForSeconds(2);
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+
+        Gizmos.DrawWireSphere(pos, attackRange);
+    }
+
+IEnumerator Moving()
     {
         while (true)
         {
@@ -36,7 +84,7 @@ public class GoblinBehaviour : MonoBehaviour
             // add new velocity
             Vector2 direction = new Vector2(facingRight ? 1 : -1, 0);
             rb2d.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
@@ -49,9 +97,38 @@ public class GoblinBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float currentHealth = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
+        if (currentHealth < health)
+        {
+            rb2d.velocity = Vector2.zero;
+            animationController.SetTrigger(Constants.GoblinTriggerTakeHit);
+            AudioManager.Play(AudioClipName.FleshTakehit);
+            health = currentHealth;
+        }
+        if(currentHealth <= 0)
+        {
+            animationController.SetTrigger(Constants.GoblinTriggerDie);
+        }
+
+        // detact player
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        if (colInfo != null)
+        {
+            rb2d.velocity = Vector2.zero;
+            hasDetectPlayer = true;
+        } else
+        {
+            hasDetectPlayer = false;
+        }
         animationController.SetBool("moving", rb2d.velocity.sqrMagnitude >= 0.2);
     }
-
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
     void Flip()
     {
         // Switch the way the player is labelled as facing

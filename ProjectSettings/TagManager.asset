@@ -10,6 +10,12 @@ TagManager:
   - Fireball
   - Goblin
   - FlyingEye
+  - Checkpoint
+  - BuffHP
+  - BuffShuriken
+  - BuffEXP
+  - FinishGame
+  - Skeleton
   layers:
   - Default
   - TransparentFX

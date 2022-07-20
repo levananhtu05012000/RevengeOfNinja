@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Attack Sword
   m_EditorClassIdentifier: 
   name: 
-  cooldownTime: 0.2
+  cooldownTime: 0.5
   activeTime: 0
+  attackRange: 0.33
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 256

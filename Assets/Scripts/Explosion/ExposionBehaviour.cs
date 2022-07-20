@@ -8,6 +8,7 @@ public class ExposionBehaviour : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.Play(AudioClipName.Explosion);
         Destroy(gameObject,this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
     }
 
