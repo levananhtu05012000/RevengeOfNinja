@@ -38,7 +38,7 @@ public class AttackSword : Skill
         // Gây dame
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log(enemy.name);
+            //Debug.Log(enemy.name);
 
             float swordDamage = PlayerPrefs.GetFloat("attackDamageValue");
 
