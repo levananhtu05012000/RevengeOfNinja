@@ -44,6 +44,7 @@ public class GoblinBehaviour : MonoBehaviour
 
     public void Attack()
     {
+        AudioManager.Play(AudioClipName.GoblinAttack);
         Vector3 pos = transform.position;
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
@@ -83,7 +84,7 @@ IEnumerator Moving()
             // add new velocity
             Vector2 direction = new Vector2(facingRight ? 1 : -1, 0);
             rb2d.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.2f);
         }
     }
 
@@ -101,9 +102,10 @@ IEnumerator Moving()
         {
             rb2d.velocity = Vector2.zero;
             animationController.SetTrigger(Constants.GoblinTriggerTakeHit);
+            AudioManager.Play(AudioClipName.FleshTakehit);
             health = currentHealth;
         }
-        if(currentHealth < 0)
+        if(currentHealth <= 0)
         {
             animationController.SetTrigger(Constants.GoblinTriggerDie);
         }

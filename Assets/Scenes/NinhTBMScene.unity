@@ -51501,6 +51501,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8923077079453641761, guid: 534ee236842a7904c9c23d0f671cb49c, type: 3}
+      propertyPath: movingDistance
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8923077079453641771, guid: 534ee236842a7904c9c23d0f671cb49c, type: 3}
       propertyPath: m_Name
       value: Goblin

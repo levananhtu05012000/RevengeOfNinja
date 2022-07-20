@@ -94,6 +94,7 @@ public class FlyingEyeBehaviour : MonoBehaviour
         if (currentHealth < health)
         {
             animationController.SetTrigger(Constants.FlyingEyeTriggerTakeHit);
+            AudioManager.Play(AudioClipName.FleshTakehit);
             health = currentHealth;
         }
         if (currentHealth <= 0)

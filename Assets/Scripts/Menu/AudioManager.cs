@@ -24,7 +24,14 @@ public static class AudioManager
         audioClips.Add(AudioClipName.Hit, Resources.Load<AudioClip>("ButtonClick"));
         audioClips.Add(AudioClipName.Up, Resources.Load<AudioClip>("ButtonClick1"));
         audioClips.Add(AudioClipName.Down, Resources.Load<AudioClip>("ButtonClick1"));
-        
+        audioClips.Add(AudioClipName.FleshTakehit, Resources.Load<AudioClip>("flesh-takehit"));
+        audioClips.Add(AudioClipName.SkeletonTakehit, Resources.Load<AudioClip>("skeleton-takehit"));
+        audioClips.Add(AudioClipName.SkeletonDie, Resources.Load<AudioClip>("skeleton-die"));
+        audioClips.Add(AudioClipName.Explosion, Resources.Load<AudioClip>("Explosion"));
+        audioClips.Add(AudioClipName.GoblinAttack, Resources.Load<AudioClip>("goblin-attack"));
+        audioClips.Add(AudioClipName.MushroomDetection, Resources.Load<AudioClip>("mushroom-detection"));
+        audioClips.Add(AudioClipName.TrapAttack, Resources.Load<AudioClip>("trap-attack"));
+
         initialized = true;
     }
     
