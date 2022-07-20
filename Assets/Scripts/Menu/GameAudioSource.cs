@@ -7,15 +7,15 @@ public class GameAudioSource : MonoBehaviour
     void Awake()
     {
         AudioSource audioSource;
-        if (!AudioManager.Initialized)
-        {
+        //if (!AudioManager.Initialized)
+        //{
             audioSource = gameObject.AddComponent<AudioSource>();
             AudioManager.Initialize(audioSource);
             DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }
