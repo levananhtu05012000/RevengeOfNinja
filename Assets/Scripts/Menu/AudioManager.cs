@@ -32,9 +32,12 @@ public static class AudioManager
         audioClips.Add(AudioClipName.MushroomDetection, Resources.Load<AudioClip>("mushroom-detection"));
         audioClips.Add(AudioClipName.TrapAttack, Resources.Load<AudioClip>("trap-attack"));
         audioClips.Add(AudioClipName.PlayerAttack, Resources.Load<AudioClip>("player-attack"));
+        //audioClips.Add(AudioClipName.PlayerAttack, Resources.Load<AudioClip>("player-attack-1"));
         audioClips.Add(AudioClipName.PlayerAttackCrit, Resources.Load<AudioClip>("player-attack-crit"));
+        //audioClips.Add(AudioClipName.PlayerAttackCrit, Resources.Load<AudioClip>("player-attack-crit-1"));
         audioClips.Add(AudioClipName.PlayerShuriken, Resources.Load<AudioClip>("player-shuriken"));
         audioClips.Add(AudioClipName.PlayerDie, Resources.Load<AudioClip>("player-die"));
+        //audioClips.Add(AudioClipName.PlayerDie, Resources.Load<AudioClip>("player-die-1"));
         audioClips.Add(AudioClipName.PlayerDash, Resources.Load<AudioClip>("player-dash"));
 
         initialized = true;
