@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MapBoss.unity
     guid: 3556e19d391c81a47a9dde994ed092ae
+  - enabled: 1
+    path: Assets/Scenes/TuLVAScene.unity
+    guid: cfb36c55405157247a398db3d09294f5
+  - enabled: 1
+    path: Assets/Scenes/Map2.unity
+    guid: fb950b86b4488c64dac84ae97ef82a04
   m_configObjects: {}
