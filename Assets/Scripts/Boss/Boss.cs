@@ -49,6 +49,33 @@ public class Boss : MonoBehaviour
 
     }
 
+    public void CastSkill(int rand)
+    {
+        StartCoroutine(BossDelay(rand));
+    }
+
+    IEnumerator BossDelay(int rand)
+    {
+        yield return new WaitForSeconds(Random.Range(1.5f, 2f));
+        if (rand == 0)
+        {
+            anim.SetTrigger("Jump");
+        }
+        else if (rand == 1)
+        {
+            anim.SetTrigger("Skill 1");
+        }
+        else if (rand == 2)
+        {
+            anim.SetTrigger("Approach");
+        }
+        else
+        {
+            anim.SetTrigger("Skill 2");
+        }
+    }
+
+
     public void OnDeathAnimationFinished()
     {
         Destroy(gameObject);

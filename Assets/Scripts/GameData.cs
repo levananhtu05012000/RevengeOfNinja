@@ -25,9 +25,9 @@ public class GameData
 
     public float bossMaxHealth = 200f;
     public float bossEnrangeHealth = 100f;
-    public float bossDamageNormal = 18f;
-    public float BossDamageEnrage = 30f;
-    public float BossJumpAttack = 30f;
-    public float BossFireBlastingAttack = 30f;
-    public float BossFireBallsAttack = 30f;
+    public float bossDamageNormal = 15f;
+    public float BossDamageEnrage = 20f;
+    public float BossJumpAttack = 18f;
+    public float BossFireBlastingAttack = 5f;
+    public float BossFireBallsAttack = 10f;
 }

@@ -10,23 +10,10 @@ public class idle_boss_behaviour : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         boss = animator.GetComponent<Boss>();
+
         rand = Random.Range(0, 4);
-        if (rand == 0) 
-        {
-            animator.SetTrigger("Jump");
-        }
-        else if (rand == 1)
-        {
-            animator.SetTrigger("Skill 1");
-        }
-        else if (rand == 2)
-        {
-            animator.SetTrigger("Approach");
-        }
-        else
-        {
-            animator.SetTrigger("Skill 2");
-        }
+        boss.CastSkill(rand);
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
