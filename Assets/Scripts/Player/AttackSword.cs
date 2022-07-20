@@ -22,9 +22,15 @@ public class AttackSword : Skill
         float critRate = PlayerPrefs.GetFloat("critRateValue");
         bool isCrit = Random.Range(0, 100) <= critRate;
         if (isCrit)
+        {
+            AudioManager.Play(AudioClipName.PlayerAttackCrit);
             anim.SetFloat("attackState", 2);
+        }
         else
+        {
+            AudioManager.Play(AudioClipName.PlayerAttack);
             anim.SetFloat("attackState", 1);
+        }
 
         // Xác định địch dính chiêu
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(swordPoint.position, attackRange, enemyLayers);

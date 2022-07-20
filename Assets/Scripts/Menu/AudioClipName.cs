@@ -18,5 +18,10 @@ public enum AudioClipName
     Explosion,
     GoblinAttack,
     MushroomDetection,
-    TrapAttack
+    TrapAttack,
+    PlayerAttack,
+    PlayerAttackCrit,
+    PlayerShuriken,
+    PlayerDie,
+    PlayerDash
 }
