@@ -21,6 +21,7 @@ public class Boss_Weapon : MonoBehaviour
         pos += transform.up * attackOffset.y;
 
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        AudioManager.Play(AudioClipName.Boss_Heavy_sword);
         if (colInfo != null)
         {
             bossDamageNormal = DataManager.Instance.gameData.bossDamageNormal;
@@ -33,7 +34,7 @@ public class Boss_Weapon : MonoBehaviour
         Vector3 pos = transform.position;
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
-
+        AudioManager.Play(AudioClipName.Boss_Heavy_sword);
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
@@ -47,6 +48,7 @@ public class Boss_Weapon : MonoBehaviour
         Vector3 pos = transform.position;
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
+        AudioManager.Play(AudioClipName.Boss_jump);
 
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
@@ -61,6 +63,7 @@ public class Boss_Weapon : MonoBehaviour
         Vector3 pos = transform.position;
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
+        AudioManager.Play(AudioClipName.Boss_Fire_blasting_Boss_skill1);
 
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
@@ -80,8 +83,4 @@ public class Boss_Weapon : MonoBehaviour
 
         Gizmos.DrawWireSphere(pos, attackRange);
     }
-
-
-
-
 }

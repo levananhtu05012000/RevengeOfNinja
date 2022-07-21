@@ -44,6 +44,7 @@ public class Boss_run_enrange : StateMachineBehaviour
 		}
 		else
 		{
+			AudioManager.Play(AudioClipName.Boss_walking_1);
 			newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
 			rb.MovePosition(newPos);
 		}

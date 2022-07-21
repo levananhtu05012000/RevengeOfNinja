@@ -21,7 +21,7 @@ public class fb : MonoBehaviour
             Destroy(gameObject);
             Instantiate<GameObject>(prefapExposionBoss, transform.position, Quaternion.identity);
         }
-        else if (collision.CompareTag(Constants.TagFireball))
+        else if (collision.CompareTag(Constants.TagFireball) || collision.gameObject.name == "CameraConfiner")
         {
         }
         else
@@ -29,7 +29,7 @@ public class fb : MonoBehaviour
             Destroy(gameObject);
             Instantiate<GameObject>(prefapExposionBoss, transform.position, Quaternion.identity);
         }
-        
+
     }
     void OnBecameInvisible()
     {
