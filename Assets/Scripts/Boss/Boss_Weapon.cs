@@ -34,7 +34,7 @@ public class Boss_Weapon : MonoBehaviour
         Vector3 pos = transform.position;
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
-        AudioManager.Play(AudioClipName.Boss_enrage_1);
+        AudioManager.Play(AudioClipName.Boss_Heavy_sword);
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
