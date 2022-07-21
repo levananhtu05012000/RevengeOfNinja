@@ -40,10 +40,12 @@ public class Boss : MonoBehaviour
         float currentHealth = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
         if (currentHealth <= DataManager.Instance.gameData.bossEnrangeHealth)
         {
+            AudioManager.Play(AudioClipName.Boss_enrage_1);
             anim.SetTrigger("isEnrange");
         }
         if (currentHealth <= 0)
         {
+            AudioManager.Play(AudioClipName.Boss_death_1);
             anim.SetTrigger("Death");
         }
 

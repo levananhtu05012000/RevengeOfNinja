@@ -24,7 +24,6 @@ public class Boss_Run : StateMachineBehaviour
 		boss = animator.GetComponent<Boss>();
 		target = new Vector2(player.position.x, rb.position.y);
 		boss.LookAtPlayer();
-
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -36,7 +35,6 @@ public class Boss_Run : StateMachineBehaviour
 		}
         else
         {
-			AudioManager.Play(AudioClipName.Boss_walking_1);
 			newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
 			rb.MovePosition(newPos);
 		}
