@@ -19,7 +19,6 @@ public class GoblinBehaviour : MonoBehaviour
     private float movingDistance;
     private float health;
     private bool hasDetectPlayer = false;
-    private bool isAttacking = false;
     private IEnumerator coroutinAttack;
 
     private void Awake()

@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
+  isVulnerable: 0
 --- !u!114 &1525832718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,5 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f2e246c43fca0340922bab94cc4c003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectDistance: 2
+  attackOffset: {x: 0, y: 0.2, z: 0}
+  attackRange: 1.5
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 512
   prefabExplosion: {fileID: 1035934715385707921, guid: 05376fdaac4b8c14c8733d18d2e5e05d, type: 3}
