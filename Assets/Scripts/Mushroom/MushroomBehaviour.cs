@@ -8,11 +8,14 @@ public class MushroomBehaviour : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator animationController;
 
+    public Vector3 attackOffset;
+    public float attackRange = 1f;
+    public LayerMask attackMask;
+
     private float moveSpeed = 2f;
     private Vector2 originalPosition;
     private bool hasRun = false;
-    [SerializeField]
-    private float detectDistance;
+    private bool hasDetectPlayer = false;
     [SerializeField]
     private GameObject prefabExplosion;
     // Start is called before the first frame update
@@ -24,9 +27,17 @@ public class MushroomBehaviour : MonoBehaviour
 
         StartCoroutine(Moving());
     }
+    void OnDrawGizmosSelected()
+    {
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+
+        Gizmos.DrawWireSphere(pos, attackRange);
+    }
     IEnumerator Moving()
     {
-        yield return new WaitUntil(HasDetectPlayer);
+        yield return new WaitUntil(() => hasDetectPlayer);
         hasRun = true;
         AudioManager.Play(AudioClipName.MushroomDetection);
         yield return new WaitForSeconds(2);
@@ -34,12 +45,6 @@ public class MushroomBehaviour : MonoBehaviour
         Vector3 location = new Vector3(originalPosition.x, originalPosition.y, Camera.main.transform.position.z);
         Instantiate<GameObject>(prefabExplosion, location, Quaternion.identity);
 
-    }
-
-    private bool HasDetectPlayer()
-    {
-        GameObject player = GameObject.FindGameObjectWithTag(Constants.TagPlayer);
-        return Mathf.Abs(player.transform.position.x - originalPosition.x) <= detectDistance;
     }
 
     // Update is called once per frame
@@ -58,7 +63,12 @@ public class MushroomBehaviour : MonoBehaviour
             if (Mathf.Abs(player.transform.position.x - originalPosition.x) < 0.1)
                 rb2d.velocity = Vector2.zero;
 
-        }
+        }// detact player
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        hasDetectPlayer = colInfo != null;
     }
 
     void Flip(bool isRight)
