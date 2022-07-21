@@ -28,6 +28,7 @@ public class MushroomBehaviour : MonoBehaviour
     {
         yield return new WaitUntil(HasDetectPlayer);
         hasRun = true;
+        AudioManager.Play(AudioClipName.MushroomDetection);
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
         Vector3 location = new Vector3(originalPosition.x, originalPosition.y, Camera.main.transform.position.z);

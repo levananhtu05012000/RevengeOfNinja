@@ -37,6 +37,7 @@ public class TrapTrigger : MonoBehaviour
         while (true)
         {
             yield return new WaitUntil(() => hasDetectPlayer);
+            AudioManager.Play(AudioClipName.TrapAttack);
             GameObject.FindGameObjectWithTag(Constants.TagPlayer).GetComponent<HealthBarBehaviour>().TakeDamage(Constants.TrapDmg, false);
             yield return new WaitForSeconds(1);
         }

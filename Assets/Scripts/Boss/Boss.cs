@@ -38,16 +38,43 @@ public class Boss : MonoBehaviour
     private void Update()
     {
         float currentHealth = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
-        if (currentHealth < 100)
+        if (currentHealth <= DataManager.Instance.gameData.bossEnrangeHealth)
         {
             anim.SetTrigger("isEnrange");
         }
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             anim.SetTrigger("Death");
         }
 
     }
+
+    public void CastSkill(int rand)
+    {
+        StartCoroutine(BossDelay(rand));
+    }
+
+    IEnumerator BossDelay(int rand)
+    {
+        yield return new WaitForSeconds(Random.Range(1.5f, 2f));
+        if (rand == 0)
+        {
+            anim.SetTrigger("Jump");
+        }
+        else if (rand == 1)
+        {
+            anim.SetTrigger("Skill 1");
+        }
+        else if (rand == 2)
+        {
+            anim.SetTrigger("Approach");
+        }
+        else
+        {
+            anim.SetTrigger("Skill 2");
+        }
+    }
+
 
     public void OnDeathAnimationFinished()
     {

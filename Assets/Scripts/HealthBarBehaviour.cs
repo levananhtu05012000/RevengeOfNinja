@@ -53,6 +53,8 @@ public class HealthBarBehaviour : MonoBehaviour
         if (isVulnerable)
             return;
 
+        if (CurrHealth <= 0) return;
+
         if (isCrit)
         {
             damage = Mathf.Ceil(damage * PlayerPrefs.GetFloat("critDamageValue"));
