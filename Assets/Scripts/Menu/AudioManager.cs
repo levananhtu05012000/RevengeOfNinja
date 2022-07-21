@@ -39,20 +39,6 @@ public static class AudioManager
         audioClips.Add(AudioClipName.PlayerDie, Resources.Load<AudioClip>("player-die"));
         //audioClips.Add(AudioClipName.PlayerDie, Resources.Load<AudioClip>("player-die-1"));
         audioClips.Add(AudioClipName.PlayerDash, Resources.Load<AudioClip>("player-dash"));
-        audioClips.Add(AudioClipName.Boss_death_1, Resources.Load<AudioClip>("Boss_death_1"));
-        audioClips.Add(AudioClipName.Boss_death_2, Resources.Load<AudioClip>("Boss_death_2"));
-        audioClips.Add(AudioClipName.Boss_enrage_1, Resources.Load<AudioClip>("Boss_enrage_1"));
-        audioClips.Add(AudioClipName.Boss_enrage_2, Resources.Load<AudioClip>("Boss_enrage_2"));
-        audioClips.Add(AudioClipName.Boss_enrage_3, Resources.Load<AudioClip>("Boss_enrage_3"));
-        audioClips.Add(AudioClipName.Boss_Fire_blasting_Boss_skill1, Resources.Load<AudioClip>("Boss_Fire_blasting_Boss_skill1"));
-        audioClips.Add(AudioClipName.Boss_Fireball_fly, Resources.Load<AudioClip>("Boss_Fireball_fly"));
-        audioClips.Add(AudioClipName.Boss_Fireball_Spell, Resources.Load<AudioClip>("Boss_Fireball_Spell"));
-        audioClips.Add(AudioClipName.Boss_Heavy_sword, Resources.Load<AudioClip>("Boss_Heavy_sword"));
-        audioClips.Add(AudioClipName.Boss_jump, Resources.Load<AudioClip>("Boss_jump"));
-        audioClips.Add(AudioClipName.Boss_take_hit, Resources.Load<AudioClip>("Boss_take_hit"));
-        audioClips.Add(AudioClipName.Boss_tranform_1, Resources.Load<AudioClip>("Boss_tranform_1"));
-        audioClips.Add(AudioClipName.Boss_walking_1, Resources.Load<AudioClip>("Boss_walking_1"));
-        audioClips.Add(AudioClipName.Boss_walking_2, Resources.Load<AudioClip>("Boss_walking_2"));
 
         initialized = true;
     }
