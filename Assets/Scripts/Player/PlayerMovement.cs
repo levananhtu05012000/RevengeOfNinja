@@ -129,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (GetComponent<BuffController>().CollectBuffHP())
             {
+                AudioManager.Play(AudioClipName.Heal);
                 Destroy(collision.gameObject);
             }
         }

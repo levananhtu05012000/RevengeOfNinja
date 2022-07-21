@@ -21,8 +21,8 @@ public static class AudioManager
         audioClips.Add(AudioClipName.Dash, Resources.Load<AudioClip>("ButtonClick"));
         audioClips.Add(AudioClipName.Slice, Resources.Load<AudioClip>("ButtonClick"));
         audioClips.Add(AudioClipName.Hit, Resources.Load<AudioClip>("ButtonClick"));
-        audioClips.Add(AudioClipName.Up, Resources.Load<AudioClip>("ButtonClick1"));
-        audioClips.Add(AudioClipName.Down, Resources.Load<AudioClip>("ButtonClick1"));
+        audioClips.Add(AudioClipName.Up, Resources.Load<AudioClip>("e-changing-tab"));
+        audioClips.Add(AudioClipName.Down, Resources.Load<AudioClip>("e-changing-tab"));
         audioClips.Add(AudioClipName.FleshTakehit, Resources.Load<AudioClip>("flesh-takehit"));
         audioClips.Add(AudioClipName.SkeletonTakehit, Resources.Load<AudioClip>("skeleton-takehit"));
         audioClips.Add(AudioClipName.SkeletonDie, Resources.Load<AudioClip>("skeleton-die"));
@@ -41,6 +41,11 @@ public static class AudioManager
         audioClips.Add(AudioClipName.PlayerDash, Resources.Load<AudioClip>("player-dash"));
         //audioClips.Add(AudioClipName.Jump, Resources.Load<AudioClip>("ButtonClick"));
         audioClips.Add(AudioClipName.Jump, Resources.Load<AudioClip>("player-jump"));
+        audioClips.Add(AudioClipName.E_changing_tab, Resources.Load<AudioClip>("e-changing-tab"));
+        audioClips.Add(AudioClipName.Complete, Resources.Load<AudioClip>("m-completion-level"));
+        audioClips.Add(AudioClipName.Lose, Resources.Load<AudioClip>("lose"));
+        audioClips.Add(AudioClipName.CoinCollected, Resources.Load<AudioClip>("a-jumping"));
+        audioClips.Add(AudioClipName.Heal, Resources.Load<AudioClip>("e-potion-drink"));
 
         //BOSS SOUNDS EF
         audioClips.Add(AudioClipName.Boss_death_1, Resources.Load<AudioClip>("Boss_death_1"));

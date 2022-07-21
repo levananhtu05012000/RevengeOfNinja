@@ -65,6 +65,7 @@ public class BuffController : MonoBehaviour
     }
     public void CollectEXP()
     {
+        AudioManager.Play(AudioClipName.CoinCollected);
         currExp += 1;
         UpdateUICount();
     }
@@ -111,6 +112,7 @@ public class BuffController : MonoBehaviour
         else
         {
             // END GAME
+            AudioManager.Play(AudioClipName.Lose);
             Debug.Log("End Game");
             DisplayEndGameUI("Game Over", 0);
         }
@@ -131,6 +133,7 @@ public class BuffController : MonoBehaviour
 
     public void FinishGame()
     {
+        AudioManager.Play(AudioClipName.Complete);
         PlayerPrefs.SetInt("expValue", PlayerPrefs.GetInt("expValue") + currExp);
         DisplayEndGameUI("Complete Level", currExp);
     }
