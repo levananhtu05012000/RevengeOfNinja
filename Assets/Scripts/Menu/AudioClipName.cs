@@ -37,5 +37,10 @@ public enum AudioClipName
     Boss_take_hit,
     Boss_tranform_1,
     Boss_walking_1,
-    Boss_walking_2
+    Boss_walking_2,
+    E_changing_tab,
+    Complete,
+    Lose,
+    Heal,
+    CoinCollected
 }

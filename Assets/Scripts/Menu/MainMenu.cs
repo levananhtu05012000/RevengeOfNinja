@@ -8,10 +8,10 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void PlayGame()
     {
-        AudioManager.Play(AudioClipName.Button);
+        //AudioManager.Play(AudioClipName.Button);
         AudioManager.Play(AudioClipName.Music);
         //SceneManager.LoadScene("ChooseLevel");        
-        SceneManager.LoadScene("PlayScene");
+        //SceneManager.LoadScene("PlayScene");
         //AudioManager.Play(AudioClipName.Button);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -40,4 +40,5 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+
 }
