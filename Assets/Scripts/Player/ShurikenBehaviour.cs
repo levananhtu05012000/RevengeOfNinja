@@ -46,7 +46,6 @@ public class ShurikenBehaviour : MonoBehaviour
         }
         if (collision.gameObject.CompareTag(Constants.TagBoss))
         {
-            AudioManager.Play(AudioClipName.Boss_take_hit);
             collision.gameObject.GetComponent<HealthBarBehaviour>().TakeDamage(PlayerPrefs.GetFloat("attackDamageValue"), isCrit);
             //Animator anim = GameObject.FindGameObjectWithTag("Boss").GetComponent<Animator>();
             //anim.SetTrigger("Takehit");

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+    public bool isDead = false;
+    public bool isEnrage = false;
     public Transform player;
     public bool isFlipped = false;
     private Animator anim;
@@ -35,17 +37,28 @@ public class Boss : MonoBehaviour
         }
     }
 
+
+    
     private void Update()
     {
         float currentHealth = gameObject.GetComponent<HealthBarBehaviour>().CurrHealth;
         if (currentHealth <= DataManager.Instance.gameData.bossEnrangeHealth)
         {
-            AudioManager.Play(AudioClipName.Boss_enrage_1);
+            if(isEnrage == false)
+            {
+                AudioManager.Play(AudioClipName.Boss_enrage_1);
+                isEnrage = true;
+            } 
             anim.SetTrigger("isEnrange");
+
         }
         if (currentHealth <= 0)
         {
-            AudioManager.Play(AudioClipName.Boss_death_1);
+            if (isDead == false)
+            {
+                AudioManager.Play(AudioClipName.Boss_death_1);
+                isDead = true;
+            }
             anim.SetTrigger("Death");
         }
 
